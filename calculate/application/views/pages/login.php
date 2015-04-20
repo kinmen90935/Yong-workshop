@@ -53,11 +53,11 @@
 <div id="main">
 	<div id="form" style="-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;padding: 15px;background-color: #77ADFF;width: 50%;margin: 20px auto 0 auto;color: #fff;">
         <div class="form-group">
-            <label>帳號</label>
+            <label>帳號:</label>
             <input name="username" class="form-control" placeholder="請輸入帳號">
         </div>
         <div class="form-group">
-            <label>密碼</label>
+            <label>密碼:</label>
             <input name="password" type="password" class="form-control" placeholder="請輸入密碼">
         </div>
         <button type="submit" class="btn btn-primary">登入</button>
