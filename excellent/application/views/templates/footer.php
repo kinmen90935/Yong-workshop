@@ -30,4 +30,34 @@
     </div>
 </footer>
 </div>
+<script type="text/javascript">
+  jQuery('#moodular').moodular({
+/* core parameters */
+  // effects separated by space
+  effects: 'mosaic',
+  // controls separated by space
+  controls: 'keys',
+  // if you want some yummy transition
+  easing: '',
+  // step 
+  step: 1,
+  // selector is to specify the children of your element (tagName)
+  selector: 'li',
+  // if timer is 0 the carrousel isn't automatic, else it's the interval in ms between each step
+  timer: 5000,
+  // speed is the time in ms of the transition
+  speed: 2000,
+  // queuing animation ?
+  queue: false,
+/* parameters for controls or effects */
+  // keys control
+  keyPrev: 37, // left key
+  keyNext: 39, // right key
+  // mosaic effects
+  slices: [10, 4],
+  mode : 'random',
+  // others
+  your_params : 'cause you can create your own effect or control'
+});
+</script>
 </body></html>
