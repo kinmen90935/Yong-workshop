@@ -1,0 +1,12 @@
+#headerArea {
+    top: 10px;
+    position: absolute;
+    right: 25px;
+    font-size: 14px;
+    color: #0545CC;
+    font-weight: 100;
+    float:right;
+    text-align:right;
+    line-height: 1.5em}
+
+#headerArea a:hover{color:#000;}

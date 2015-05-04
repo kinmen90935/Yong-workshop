@@ -1,0 +1,25 @@
+/*排版*/
+div.tem_left{
+	float: left;
+	width: 10%;
+	margin: 0% 1% 0% 1%;
+}
+div.medium{
+	float: left;	
+	width: 60%;
+	margin: 0% 1% 0% 1%;	
+}
+
+div.tem_right{
+	float: left;
+	width: 20%;
+	margin: 0% 1% 0% 1%;
+}
+
+a.link{
+	color: #4A67FF;
+
+}
+a:hover{
+	color: #DB468E;
+}
