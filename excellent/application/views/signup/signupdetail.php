@@ -15,10 +15,11 @@
             var name = $("input[name=name]").val();
             var department = $("select[name=department]").val();
             var sex = $("select[name=sex]").val();
+            var ps = $("select[name=ps]").val();
             $.ajax({
-                url : "<?=base_url();?>index.php/signup/ajax_create_signup",
+                url : "<?=base_url();?>signup/ajax_create_signup",
                 type: "POST",
-                data : {'s_id' : s_id ,'name' : name ,'department' : department ,'sex' : sex},
+                data : {'s_id' : s_id ,'name' : name ,'department' : department ,'sex' : sex,'ps' : ps},
                 dataType : 'json',
                 success:function(rtn, textStatus, jqXHR) {
                     alert("成功2");
@@ -27,6 +28,7 @@
                         console.log(rtn.msg);
                         //$('.alert-success').show().html(rtn.msg);
                     } else {
+                        console.log(rtn.msg);
                         //$('.alert-danger').show().html(rtn.msg);
                     }
 
