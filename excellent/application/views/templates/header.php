@@ -52,15 +52,16 @@
 	<div id="nav" class="clearfix">
 	    <div class="inner">
 	    <ul class="clearfix">
-	        <li><a href="news">最新消息</a></li>
-	        <li><a href="introduce">計畫介紹</a></li>
-	        <li><a href="plan">主軸計畫</a></li>
-	        <li><a href="files.php">成果專區</a></li>
-	        <li><a href="planExam">計劃管考</a></li>
+	        <li><a href="<?=base_url()?>news">最新消息</a></li>
+	        <li><a href="<?=base_url()?>introduce">計畫介紹</a></li>
+	        <li><a href="<?=base_url()?>plan">主軸計畫</a></li>
+	        <li><a href="<?=base_url()?>achievement">成果專區</a></li>
+	        <li><a href="<?=base_url()?>planExam">計劃管考</a></li>
 	        <!-- <li><a href="achievement.php">活動成果</a></li> -->
-	        <li><a href="link.php">活動報名</a></li>
+	        <li><a href="<?=base_url()?>signup">活動報名</a></li>
 	<!--         <li><a href="epaperlist.php">電子報</a></li> -->
-	        <li><a href="message.php">聯絡我們</a></li>
+	        <li><a href="<?=base_url()?>contact">聯絡我們</a></li>
 	    </ul>
 	    </div>
 	</div>
+<div style="margin:5% 10% 10% 10%;">

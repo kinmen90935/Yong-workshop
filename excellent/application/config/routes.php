@@ -53,6 +53,21 @@ $route['news/view/(:any)'] = 'news/view/$1';
 $route['news/(:any)/(:any)/(:any)/(:any)/create'] = 'news/create';
 $route['news'] = 'news';
 $route['news/create'] = 'news/create';
+
+$route['achievement/view/(:any)'] = 'achievement/view/$1';
+$route['achievement/(:any)/(:any)/(:any)/(:any)/create'] = 'achievement/create';
+$route['achievement'] = 'achievement';
+$route['achievement/create'] = 'achievement/create';
+
+//$route['signup/view/(:any)'] = 'signup/view/$1';
+$route['signup/signupdetail'] = 'signup/signupdetail';
+$route['signup/signupdetail/(:any)'] = 'signup/signupdetail/$1';
+$route['signup'] = 'signup';
+
+$route['news/view/(:any)'] = 'news/view/$1';
+$route['news/(:any)/(:any)/(:any)/(:any)/create'] = 'news/create';
+$route['news'] = 'news';
+$route['news/create'] = 'news/create';
 $route['default_controller'] = 'pages/view';
 $route['(:any)'] = 'pages/view/$1';
 $route['default_controller'] = 'welcome';

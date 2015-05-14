@@ -1,3 +1,5 @@
+</div>
+<div class="col span_11_of_12"></div>
 <div id="footerContainer" class="wrap">
 <footer>
     <div class="section group">

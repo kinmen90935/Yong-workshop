@@ -1,13 +1,8 @@
 <!--主軸計畫-->
-<div style="margin:5% 10% 10% 10%;">
-  <div class="tem_left">
+
+  <div class="col span_6_of_12"> 
     <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
-      預留aside
-    </p>
-  </div>
-  <div class="medium"> 
-    <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
-      <a class="link" href="home">首頁</a>>主軸計畫
+      <a class="link" href="news">首頁</a>>主軸計畫
     </p>
     <div class="plan">              
       <ul>
@@ -129,19 +124,9 @@
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本計畫以本校理學院五個學系，培育科技專業人才暨產學合作為主軸，將產學合作的真實研發經驗轉化成為教學課程模組，讓學生達到學用合一，達成科技專業人才培育目標。</P>
           <img src="<?=base_url()?>assets/images/main4_3.png" style="width:100%; height:100%;"/> 
         </div>
-
-
       </div>
   </div>
 </div>
-  <div class="tem_right">
-    <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
-      <span class="ui-icon ui-icon-play" ></span>
-      職涯百工圖
-    </p>
-  </div>
-</div>
-<div class="col span_11_of_12"></div>
 <script type="text/javascript">
   $(document).ready(function(){
     $("#child_1").click(function(){

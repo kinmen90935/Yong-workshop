@@ -1,13 +1,8 @@
 <!--計畫介紹-->
-<div style="margin:5% 10% 10% 10%;">
-  <div class="tem_left">
+
+  <div class="col span_6_of_12"> 
     <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
-      預留aside
-    </p>
-  </div>
-  <div class="medium"> 
-    <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
-      <a class="link" href="home">首頁</a>>計畫介紹
+      <a class="link" href="news">首頁</a>>計畫介紹
     </p>
     <div class="introduce">
               
@@ -43,12 +38,5 @@
       </div>
   </div>
 </div>
-  <div class="tem_right">
-    <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
-      <span class="ui-icon ui-icon-play" ></span>
-      職涯百工圖
-    </p>
-  </div>
-</div>
-<div class="col span_11_of_12"></div>
+  
 
