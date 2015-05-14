@@ -36,27 +36,32 @@ class Signup extends CI_Controller {
 
 	public function ajax_create_signup()
 	{
-		
-		$this->load->helper('url');
-		foreach ($_POST as $key => $data) {
-			if (!$data && $key != 'ps') {
-				echo json_encode(array('status' => false, 'msg' => '請確認欄位是否填妥!'));
+		$s_id = $this->input->post('s_id');
+		if ($s_id) {
+			echo json_encode(array('status' => true, 'msg' => '成功!'));
+		} else {
+			echo json_encode(array('status' => false, 'msg' => '失敗!'));
+		}
+		//$this->load->helper('url');
+		// foreach ($_POST as $key => $data) {
+		// 	if (!$data && $key != 'ps') {
+		// 		echo json_encode(array('status' => false, 'msg' => '請確認欄位是否填妥!'));
 				
-				echo "<script>alert('NO');</script>";
-				die();
-			}
-		}	
+		// 		echo "<script>alert('NO');</script>";
+		// 		die();
+		// 	}
+		// }	
 		
-		echo "<script>alert('SUCCESS');</script>";
-		$this->signup_model->create_signup();
-		echo json_encode(array('status' => true, 'msg' => '報名成功'));
-		$data['signup'] = $this->signup_model->get_signup();
-		$data['title'] = 'News archive';
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/left_aside', $data);
-		$this->load->view('signup/signuplist', $data);
-		$this->load->view('templates/right_aside', $data);
-		$this->load->view('templates/footer');
+		// echo "<script>alert('SUCCESS');</script>";
+		// $this->signup_model->create_signup();
+		// echo json_encode(array('status' => true, 'msg' => '報名成功'));
+		// $data['signup'] = $this->signup_model->get_signup();
+		// $data['title'] = 'News archive';
+		// $this->load->view('templates/header', $data);
+		// $this->load->view('templates/left_aside', $data);
+		// $this->load->view('signup/signuplist', $data);
+		// $this->load->view('templates/right_aside', $data);
+		// $this->load->view('templates/footer');
 
 	}
 

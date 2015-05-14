@@ -7,22 +7,27 @@
           changeYear: true
         });
         $("#formPost").submit(function(e){
-            var formDatas = $(this).serialize();
-            alert(formDatas);
+            e.preventDefault(); 
+            //var formDatas = $(this).serialize();
+            //alert(formDatas);
             //var formURL = $(this).attr("action");
+            var s_id = $("input[name=s_id]").val();
+            var name = $("input[name=name]").val();
+            var department = $("select[name=department]").val();
+            var sex = $("select[name=sex]").val();
             $.ajax({
-                url : "<?=base_url()?>signup/ajax_create_signup;?>",
+                url : "<?=base_url();?>index.php/signup/ajax_create_signup",
                 type: "POST",
-                data : datas:[{'s_id':$("#s_id").val(),'name':$("#name").val(),
-                        'department':$("#u_dep").val(),'sex':$("#sex").val()}],
+                data : {'s_id' : s_id ,'name' : name ,'department' : department ,'sex' : sex},
                 dataType : 'json',
                 success:function(rtn, textStatus, jqXHR) {
                     alert("成功2");
                     if (rtn.status) {
                         $("#formPost")[0].reset();
-                        $('.alert-success').show().html(rtn.msg);
+                        console.log(rtn.msg);
+                        //$('.alert-success').show().html(rtn.msg);
                     } else {
-                        $('.alert-danger').show().html(rtn.msg);
+                        //$('.alert-danger').show().html(rtn.msg);
                     }
 
                 },
@@ -31,7 +36,6 @@
                     alert(errorThrown);
                 }
             });
-            e.preventDefault(); 
        });
     
     });
