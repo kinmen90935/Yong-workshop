@@ -215,7 +215,6 @@ box-shadow: 1px 1px 4px 1px #cbcbcb;
 
 /*報名表單樣式*/
 .elegant-aero {
-    width: 100%;
     margin-right: auto;
     margin-left: auto;
     background: #FFFFFF;
@@ -227,7 +226,7 @@ box-shadow: 1px 1px 4px 1px #cbcbcb;
 }
 .elegant-aero  h1{
     color: #fff;
-    font-size: 24px;
+    font-size: 22px;
     padding: 10px;
     display: block;
     background: #0077DD;
@@ -277,7 +276,7 @@ box-shadow: 1px 1px 4px 1px #cbcbcb;
 .elegant-aero select {
     background: #fbfbfb url('images/down-arrow.png') no-repeat right;
     background: #fbfbfb url('images/down-arrow.png') no-repeat right;
-   appearance:none;
+    appearance:none;
     -webkit-appearance:none;
    -moz-appearance: none;
     text-indent: 0.01px;

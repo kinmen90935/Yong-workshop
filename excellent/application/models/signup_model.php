@@ -19,7 +19,6 @@ class Signup_model extends CI_Model {
 	}
 	public function get_signupDetail($slug = FALSE)
 	{
-		//$slug = $_GET["s_id"];
 		if ($slug === FALSE)
 		{
 			$query = $this->db->get('signup');
@@ -48,17 +47,22 @@ class Signup_model extends CI_Model {
 			's_id' => $this->input->post('s_id'),		
 			'name' => $this->input->post('name'),
 			'department' => $this->input->post('department'),
+			'phone' => $this->input->post('phone'),
+			'email' => $this->input->post('email'),
+			'id_number' => $this->input->post('identity'),
+			'birthday' => $this->input->post('birthday'),
 			'sex' => $this->input->post('sex'),
-			'ps' => $this->input->post('ps')
+			'ps' => $this->input->post('ps'),
+			'food' => $this->input->post('food')
 		);
 
-		/*foreach ($datas as $key => $insertData) {
+		foreach ($insertArray as $key => $insertData) :
 			if (!$insertData) {
 				unset($insertArray[$key]);
 			}
-		}*/
+		endforeach;
 
-		return $this->db()->insert("signupdetial", $insertArray);
+		return $this->db->insert("signupdetial", $insertArray);
 	}	
 	
 }
