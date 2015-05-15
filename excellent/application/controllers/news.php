@@ -15,6 +15,7 @@ class News extends CI_Controller {
 		$this->load->view('templates/header', $data);
 		echo $this->news_model->get_news_list();
 		$this->load->view('news/index');
+		$this->load->view('templates/right_aside', $data);
 		$this->load->view('templates/footer');
 	}
 
@@ -26,31 +27,23 @@ class News extends CI_Controller {
 		$this->load->view('templates/header', $data);
 		$this->news_model->get_news_list2($offset);
 		$this->load->view('news/index');
+		$this->load->view('templates/right_aside', $data);
 		$this->load->view('templates/footer');
 	}
 
-	public function create()
+	public function news_complete($slug)
 	{
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-		
-		$data['title'] = 'Create a news item';
-		
-		$this->form_validation->set_rules('title', '標題', 'required');
-		$this->form_validation->set_rules('text', '內文', 'required');
-		
-		if ($this->form_validation->run() === FALSE)
+		$query = $this->news_model->get_news($slug);
+		foreach ($query->result_array() as $row)
 		{
-			$this->load->view('templates/header', $data);	
-			$this->load->view('news/create');
-			$this->load->view('templates/footer');
 			
 		}
-		else
-		{
-			$this->news_model->set_news();
-			$this->load->view('news/success');
-		}
+
+		$this->load->view('templates/header');
+		$this->load->view('news/view', $row);
+		//$this->load->view('templates/right_aside');
+		$this->load->view('templates/footer');
+
 	}
 
 }
