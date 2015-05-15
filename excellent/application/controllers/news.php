@@ -10,30 +10,25 @@ class News extends CI_Controller {
 	public function index()
 	{
 		$data['news'] = $this->news_model->get_news();
-		$data['title'] = 'News archive';
+		$data['title'] = '最新消息';
 
 		$this->load->view('templates/header', $data);
-		$this->load->view('news/index', $data);
+		echo $this->news_model->get_news_list();
+		$this->load->view('news/index');
 		$this->load->view('templates/footer');
-
-		$this->load->helper('url');
 	}
 
-	public function view($slug)
+	public function view($offset)
 	{
-		$data['news_item'] = $this->news_model->get_news($slug);
-
-		if (empty($data['news_item']))
-		{
-			show_404();
-		}
-
-		$data['title'] = $data['news_item']['title'];
+		$data['news'] = $this->news_model->get_news();
+		$data['title'] = '最新消息';
 
 		$this->load->view('templates/header', $data);
-		$this->load->view('news/view', $data);
+		$this->news_model->get_news_list2($offset);
+		$this->load->view('news/index');
 		$this->load->view('templates/footer');
 	}
+
 	public function create()
 	{
 		$this->load->helper('form');
