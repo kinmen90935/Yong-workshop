@@ -55,14 +55,20 @@ class Signup_model extends CI_Model {
 			'ps' => $this->input->post('ps'),
 			'food' => $this->input->post('food')
 		);
-
+		//insert signup person
 		foreach ($insertArray as $key => $insertData) :
 			if (!$insertData) {
 				unset($insertArray[$key]);
 			}
 		endforeach;
-
-		return $this->db->insert("signupdetial", $insertArray);
+		$this->db->insert("signupdetial", $insertArray);
+		//query count
+		$this->db->select('count');
+		$count = $this->db->get_where('signup',array('s_id' => $insertArray['s_id']));
+		//update count
+		$data = array('count' => $count+1);
+		$this->db->where('s_id', $insertArray['s_id']);	
+		return $this->db->update('signup', $data); 
 	}	
 	
 }

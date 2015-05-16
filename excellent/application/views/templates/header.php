@@ -6,6 +6,7 @@
 	<?php
 		echo "<script src='".base_url()."assets/jquery-1.11.2.min.js'></script>";
 		echo "<script src='".base_url()."assets/jquery-ui.min.js'></script>";
+		echo "<script src='".base_url()."assets/moodular.js'></script>";
 		echo "<link rel='stylesheet' type='text/css' href='".base_url()."assets/jquery-ui.css'></link>";
 		echo "<link rel='stylesheet' type='text/css' href='".base_url()."assets/style.css'></link>";
 		echo "<link rel='stylesheet' type='text/css' href='".base_url()."assets/base.css'></link>";
@@ -40,6 +41,7 @@
 	    	<a id="logo" href="<?=base_url();?>home"><img src="<?=base_url();?>assets/images/logo.png" alt="" width="10%"></a>
 	        <div id="headerArea">
 	            <a href="http://www.ntue.edu.tw" target="_blank" ><span class="ui-icon  ui-icon-home"></span>北教大首頁</a>
+	            <a href="http://ctld.ntue.edu.tw/" target="_blank" ><span class="ui-icon  ui-icon-home"></span>教學發展中心首頁</a>
 	        </div>
 	    </div>
 	</div>

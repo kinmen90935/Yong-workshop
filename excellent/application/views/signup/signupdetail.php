@@ -49,18 +49,19 @@
     <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
       <a class="link" href="<?=base_url()?>news">首頁</a> > 
       <a class="link" href="<?=base_url()?>signup">活動報名</a> >
-      <?php echo $signupDetail['title'];?>
+      <?php echo htmlspecialchars_decode($signupDetail['title']);?>
     </p>
 	<form id="formPost"  method="post" class="elegant-aero">
-        <h1>《<?php echo $signupDetail['title'];?>報名表單》</h1>
+        <h1>《<?php echo htmlspecialchars_decode($signupDetail['title']);?>報名表單》</h1>
          <h4>活動期間</h4>
         <div style="margin-bottom: 10px;padding:0px;background-color: #fff;border-bottom: 2px solid #ddd;">
-           <!--
-            <{$signupDetail.start_date|date_format:"Y-m-d h:i:s"}>~<{$signupDetail.end_date|date_format:"Y-m-d h:i:s"}></div>
-            -->
+            <?php echo date('Y-m-d h:i:s',$signupDetail['start_date']);?>~
+            <?php echo date('Y-m-d h:i:s',$signupDetail['end_date']);?>            
+        </div>
+            
         <h4>活動內容</h4>
         <div style="margin-bottom: 10px;padding:0px;background-color: #fff;border-bottom: 2px solid #ddd;">
-        <?php echo $signupDetail['content'];?></div>
+        <?php echo htmlspecialchars_decode($signupDetail['content']);?></div>
         
         <label class="required">
             <span>姓名(*) :</span>
