@@ -6,12 +6,7 @@
 	<?php
 		echo "<script src='".base_url()."assets/jquery-1.11.2.min.js'></script>";
 		echo "<script src='".base_url()."assets/jquery-ui.min.js'></script>";
-		//echo "<script src='".base_url()."assets/moodular.js'></script>";
-		//echo "<script src='".base_url()."assets/jquery-ui.structure.min.js'></script>";
-		//echo "<script src='".base_url()."assets/jquery-ui.theme.min.js'></script>";
 		echo "<link rel='stylesheet' type='text/css' href='".base_url()."assets/jquery-ui.css'></link>";
-		//echo "<link rel='stylesheet' type='text/css' href='".base_url()."/assets/base.min.css'></link>";
-		//echo "<link rel='stylesheet' type='text/css' href='".base_url()."/assets/style.min.css'></link>";
 		echo "<link rel='stylesheet' type='text/css' href='".base_url()."assets/style.css'></link>";
 		echo "<link rel='stylesheet' type='text/css' href='".base_url()."assets/base.css'></link>";
 		echo "<link rel='stylesheet' type='text/css' href='".base_url()."assets/rita.css'></link>";

@@ -10,52 +10,40 @@ class News extends CI_Controller {
 	public function index()
 	{
 		$data['news'] = $this->news_model->get_news();
-		$data['title'] = 'News archive';
+		$data['title'] = '最新消息';
 
 		$this->load->view('templates/header', $data);
-		$this->load->view('news/index', $data);
+		echo $this->news_model->get_news_list();
+		$this->load->view('news/index');
+		$this->load->view('templates/right_aside', $data);
 		$this->load->view('templates/footer');
-
-		$this->load->helper('url');
 	}
 
-	public function view($slug)
+	public function view($offset)
 	{
-		$data['news_item'] = $this->news_model->get_news($slug);
-
-		if (empty($data['news_item']))
-		{
-			show_404();
-		}
-
-		$data['title'] = $data['news_item']['title'];
+		$data['news'] = $this->news_model->get_news();
+		$data['title'] = '最新消息';
 
 		$this->load->view('templates/header', $data);
-		$this->load->view('news/view', $data);
+		$this->news_model->get_news_list2($offset);
+		$this->load->view('news/index');
+		$this->load->view('templates/right_aside', $data);
 		$this->load->view('templates/footer');
 	}
-	public function create()
+
+	public function news_complete($slug)
 	{
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-		
-		$data['title'] = 'Create a news item';
-		
-		$this->form_validation->set_rules('title', '標題', 'required');
-		$this->form_validation->set_rules('text', '內文', 'required');
-		
-		if ($this->form_validation->run() === FALSE)
+		$query = $this->news_model->get_news($slug);
+		foreach ($query->result_array() as $row)
 		{
-			$this->load->view('templates/header', $data);	
-			$this->load->view('news/create');
-			$this->load->view('templates/footer');
 			
 		}
-		else
-		{
-			$this->news_model->set_news();
-			$this->load->view('news/success');
-		}
+
+		$this->load->view('templates/header');
+		$this->load->view('news/view', $row);
+		//$this->load->view('templates/right_aside');
+		$this->load->view('templates/footer');
+
 	}
 
 }

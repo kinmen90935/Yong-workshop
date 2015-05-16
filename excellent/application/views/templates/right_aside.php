@@ -1,4 +1,4 @@
-	<div class="col span_4_of_12">
+	<div class="col span_5_of_12">
 		<p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
 		  <span class="ui-icon ui-icon-play" ></span>
 		  職涯百工圖

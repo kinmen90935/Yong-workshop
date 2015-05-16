@@ -1,5 +1,5 @@
 <!--活動報名-->
-<div class="col span_6_of_12">
+<div class="col span_7_of_12">
     <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
       <a class="link" href="news">首頁</a>>活動報名
     </p>

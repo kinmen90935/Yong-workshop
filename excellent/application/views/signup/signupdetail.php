@@ -8,34 +8,35 @@
         });
         $("#formPost").submit(function(e){
             e.preventDefault(); 
-            //var formDatas = $(this).serialize();
-            //alert(formDatas);
-            //var formURL = $(this).attr("action");
             var s_id = $("input[name=s_id]").val();
             var name = $("input[name=name]").val();
             var department = $("select[name=department]").val();
             var sex = $("select[name=sex]").val();
-            var ps = $("select[name=ps]").val();
+            var email = $("input[name=email]").val();
+            var birthday = $("input[name=birthday]").val();
+            var identity = $("input[name=identity]").val();
+            var phone = $("input[name=phone]").val();
+            var food = $("input[name=food]:checked").val();
+            var ps = $("textarea[name=ps]").val();
             $.ajax({
                 url : "<?=base_url();?>signup/ajax_create_signup",
                 type: "POST",
-                data : {'s_id' : s_id ,'name' : name ,'department' : department ,'sex' : sex,'ps' : ps},
+                data : {'s_id' : s_id ,'name' : name ,'department' : department ,'sex' : sex,
+                        'email' : email , 'birthday' : birthday , 'identity' : identity ,
+                        'phone' : phone , 'food' : food ,'ps' : ps},
                 dataType : 'json',
                 success:function(rtn, textStatus, jqXHR) {
-                    alert("成功2");
                     if (rtn.status) {
                         $("#formPost")[0].reset();
                         console.log(rtn.msg);
-                        //$('.alert-success').show().html(rtn.msg);
+                        $('.alert-success').show().html(rtn.msg);
+                         $('.alert-danger').hide();
                     } else {
                         console.log(rtn.msg);
-                        //$('.alert-danger').show().html(rtn.msg);
+                        $('.alert-danger').show().html(rtn.msg);
                     }
-
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
-                    alert("失敗1");
-                    alert(errorThrown);
                 }
             });
        });
@@ -44,7 +45,7 @@
         
 </script>
 
-<div class="col span_6_of_12">
+<div class="col span_7_of_12">
     <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
       <a class="link" href="<?=base_url()?>news">首頁</a> > 
       <a class="link" href="<?=base_url()?>signup">活動報名</a> >
@@ -64,7 +65,7 @@
         <label class="required">
             <span>姓名(*) :</span>
             <input id="s_id" type="hidden" name="s_id" value="<?php echo $signupDetail['s_id'];?>">
-            <input id="name" type="text" name="name" placeholder="請輸入您的全名"/>
+            <input id="name" type="text" name="name" placeholder="請輸入您的全名">
         </label>
 
         <label class="required">
@@ -90,13 +91,13 @@
         
         <label>
             <span>信箱(*) :</span>
-            <input id="email" type="email" name="email" placeholder="請輸入您的信箱"/>
+            <input id="email" type="email" name="email" placeholder="請輸入您的信箱">
         </label>
 
         <?php if ($signupDetail['bool_birthday']) { ?>
         <label class="required">
             <span>生日(*) :</span>
-            <input type="text" id="birthday" name="birthday" placeholder="請點選生日">
+            <input id="birthday" type="date"name="birthday" placeholder="請點選生日">
         </label>
         <?php } ?>
 
@@ -110,7 +111,7 @@
         <?php if ($signupDetail['bool_phone']) { ?>
         <label class="required">
             <span>手機(*) :</span>
-            <input type="text" name="phone" placeholder="請輸入您的手機">
+            <input type="number" name="phone" placeholder="請輸入您的手機">
         </label>
         <?php } ?>
 
