@@ -60,10 +60,12 @@ $route['signup/signupdetail/(:any)'] = 'signup/signupdetail/$1';
 $route['signup'] = 'signup';
 
 $route['news/(:any)'] = 'news/view/$1';
-$route['news/(:any)/create'] = 'news/create';
 $route['news'] = 'news';
 $route['news/create'] = 'news/create';
 
+$route['admin/login'] = 'admin';
+$route['admin/ajax_login'] = 'admin/ajax_login';
+$route['admin'] = 'admin';
 
 $route['(:any)'] = 'pages/view/$1';
 $route['default_controller'] = 'pages';
