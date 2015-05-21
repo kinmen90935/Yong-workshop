@@ -9,14 +9,33 @@ class News extends CI_Controller {
 
 	public function index()
 	{
-		$data['news'] = $this->news_model->get_news();
+		$this->news_list();
+
+	}
+
+	public function news_list($value='')
+	{
+		//
 		$data['title'] = '最新消息';
 
 		$this->load->view('templates/header', $data);
-		echo $this->news_model->get_news_list();
+		//echo $this->news_model->get_news_list();
 		$this->load->view('news/index');
 		$this->load->view('templates/right_aside', $data);
 		$this->load->view('templates/footer');
+	}
+
+	public function ajax_news_list($value='')
+	{
+		$page = $this->input->post('page');
+
+		$data['news'] = $this->news_model->get_news($page);
+
+
+		$news = $this->load->view('ajax_news_list',$data,true);
+		$page = $this->load->view('ajax_pg');
+
+		echo json_encode(array('status' => true, 'news' => $news));
 	}
 
 	public function view($offset)

@@ -2,17 +2,35 @@
     <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
       <a class="link" href="<?php echo base_url();?>">首頁</a>>最新消息
     </p>
- 	<?php 
- 		echo $this->table->generate();
-		  //添加分頁導航條
- 	?>
+	<div>
+		news
+	</div>
  	<div class="col span_2_of_12"></div>
  	<div class="col span_9_of_12">
- 	<?php
-		echo $this->pagination->create_links();
-	?>
+	<div>
+		pg
+	</div>
 	</div>
 </div>
+<script>
+function ajax_news_list (page) {
+	page = page || 1;
+
+	$.post("ajax_news_list",{page : page},function(rtn){
+		$(news).html(rtn.news);
+		$(pg).html(rtn.page);
+	})
+}
+
+$(document).ready(function () {
+	ajax_news_list();
+
+	$('body').on(click,'page',function(argument) {
+		var a = page-data;
+		ajax_news_list(a);
+	})
+});
+</script>
 <style>
 	#page_nav
 	{

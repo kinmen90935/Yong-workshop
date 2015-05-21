@@ -69,7 +69,8 @@
         width: 100%;
       }
     </style>
-    <script src=<?=base_url()?>assets/jquery-1.11.2.min.js></script>
+    <script src=<?php echo base_url();?>assets/jquery-1.11.2.min.js></script>
+    <script src=<?php echo base_url();?>assets/jquery-login.js></script>
   </head>
   <body>
     <div id="container">
@@ -84,35 +85,6 @@
         <input type="submit" class="btn" id="btnLogin" value="登入"></input>
       </form>
     </div>
-    <script language="JavaScript" type="text/javascript">
-      $(document).ready(function(){
-        $('#login_form').submit(function(e) {
-          e.preventDefault(); 
-          console.log("abc");
-          var username = $("input[name=username]").val();
-          var password = $("input[name=password]").val();
-          $.ajax({
-            url : "<?=base_url();?>admin/ajax_login",
-            type: "POST",
-            data : {'username' : username ,'password' : password},
-            dataType: 'json',
-            success:function(rtn, textStatus, jqXHR) {
-              if (rtn.status) {
-                window.location.href = "admin/index.php";
-                //console.log("def");
-                //$('.alert-success').show().html(rtn.msg);
-               // $('.alert-danger').hide();
-              } else {
-                //$('.alert-danger').show().html(rtn.msg);
-              }
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-              console.log(errorThrown);
-                  //if fails
-            }
-          });
-        });
-      });
-    </script>
+    
   </body>
 </html>

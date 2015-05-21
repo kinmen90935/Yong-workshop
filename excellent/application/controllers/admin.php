@@ -45,5 +45,12 @@ class Admin extends CI_Controller {
 			echo json_encode(array('status' => true, 'msg' => '登入成功!'));
 		}
 	}
+	public function home()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('admin/home');
+		$this->load->view('templates/right_aside');
+		$this->load->view('templates/footer');
+	}
 
 }

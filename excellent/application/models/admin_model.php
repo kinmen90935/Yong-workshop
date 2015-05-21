@@ -8,12 +8,12 @@ class Admin_model extends CI_Model {
 	
 	public function select_admin($username=FLASE)
 	{
-		if ($username === FLASE)
+		/*if ($username === FLASE)
 		{
 			$query = $this->db->get('members');
 			return $query->result_array();
-		}
-		$this->db->select('username');
+		}*/
+		//$this->db->select('username');
 		$query = $this->db->get_where('members', array('username' => 'peter'));
 		return $query->row_array();
 		/*

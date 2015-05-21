@@ -43,22 +43,24 @@
 	            <a href="http://www.ntue.edu.tw" target="_blank" ><span class="ui-icon  ui-icon-home"></span>北教大首頁</a>
 	            <a href="http://ctld.ntue.edu.tw/" target="_blank" ><span class="ui-icon  ui-icon-home"></span>教學發展中心首頁</a>
 	        </div>
+
+			<div class="clearfix">
+			    <div class="inner">
+				    <ul id="nav" class="clearfix">
+				        <li><a href="<?=base_url()?>news">最新消息</a></li>
+				        <li><a href="<?=base_url()?>pages/introduce">計畫介紹</a></li>
+				        <li><a href="<?=base_url()?>pages/plan">主軸計畫</a></li>
+				        <li><a href="<?=base_url()?>pages/achievement">成果專區</a></li>
+				        <li><a href="<?=base_url()?>pages/planExam">計劃管考</a></li>
+				        <li><a href="<?=base_url()?>signup">活動報名</a></li>
+				        <li><a href="<?=base_url()?>pages/contact">聯絡我們</a></li>
+				    </ul>
+			    </div>
+			</div>
+
 	    </div>
+
+    
 	</div>
-	<div id="pull" style="display:none;"><i class="fa fa-bars"></i>  選單</div>
-	<div id="nav" class="clearfix">
-	    <div class="inner">
-	    <ul class="clearfix">
-	        <li><a href="<?=base_url()?>news">最新消息</a></li>
-	        <li><a href="<?=base_url()?>introduce">計畫介紹</a></li>
-	        <li><a href="<?=base_url()?>plan">主軸計畫</a></li>
-	        <li><a href="<?=base_url()?>achievement">成果專區</a></li>
-	        <li><a href="<?=base_url()?>planExam">計劃管考</a></li>
-	        <!-- <li><a href="achievement.php">活動成果</a></li> -->
-	        <li><a href="<?=base_url()?>signup">活動報名</a></li>
-	<!--         <li><a href="epaperlist.php">電子報</a></li> -->
-	        <li><a href="<?=base_url()?>contact">聯絡我們</a></li>
-	    </ul>
-	    </div>
-	</div>
-<div style="margin:5% 10% 10% 10%;">
+
+<div class="wrap" id="main">

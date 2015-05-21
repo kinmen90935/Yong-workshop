@@ -1,3 +1,6 @@
+<?php
+  $this->load->view('templates/header');
+?>
 <!--主軸計畫-->
 
   <div class="col span_7_of_12"> 
@@ -189,4 +192,6 @@
   
 </script>
 
-
+<?php
+  $this->load->view('templates/footer');
+?>
