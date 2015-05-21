@@ -15,8 +15,20 @@
         </thead>        
         <?php foreach ($signup as $signup_item): ?>
         <tr>
-            <td width="30%"><a href="<?=base_url()?>signup/signupdetail/<?php echo $signup_item['s_id']; ?>"> <?php echo $signup_item['title'];?> </a></td>
+            <td width="30%"><a href="<?=base_url()?>signup/signupdetail/<?php echo $signup_item['s_id']; ?>"> <?php echo htmlspecialchars_decode($signup_item['title']);?> </a></td>
             <td width="20%">
+                <?php
+                if ($signup_item['end_date'] < time()) {
+                    $message = "很抱歉! 報名已逾期";?>
+                    <script type="text/javascript">alert($message);</script>
+                    <?php
+                } else {
+                    if ($signup_item['start_date'] > time()) {
+                        $message = "還未開放報名喔!";
+                        //$user->my_msg($message, 'signupdetail.php');
+                    }
+                }
+                ?>
             <!--
                 <{if $signup.end_date < $smarty.now}>
                     <span class="highlight" style="background-color: #AD0909;">報名已截止</sapn>
@@ -29,10 +41,10 @@
                 <{/if}>
             -->
             </td>
-            <td width="15%"></td>
-            <td width="15%"></td>
-            <td width="10%">
-                
+            <td width="15%"><?php echo date('Y-m-d',$signup_item['start_date']);?>~
+                            <?php echo date('Y-m-d',$signup_item['end_date']);?></td>
+            <td width="15%"><?php echo date('Y-m-d',$signup_item['begin_at']);?></td>
+            <td width="10%"><?php echo intval($signup_item['count']);?>         
             </td>
         </tr>
         <?php endforeach ?>

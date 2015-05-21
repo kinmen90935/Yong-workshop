@@ -1,3 +1,0 @@
-
-	<p style="font-size:12pt;color:red;"><b>123</b></p>
-	<p><b>5454</b></p>

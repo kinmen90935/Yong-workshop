@@ -5,22 +5,14 @@ class News_model extends CI_Model {
 	{
 		$this->load->database();
 	}
-	public function get_news($slug = FALSE)
+
+	public function get_news($page = 1)
 	{
-		if ($slug === FALSE)
-		{
-			$query = $this->db->get('news');
-			return $query->result_array();
-		}
-		
-		$query = $this->db->get_where('news', array('n_id' => $slug));
-		return $query;
-		/*foreach ($query->result_array() as $row)
-		{
-			return $row['title'];
-		}*/
-		
+		$query = $this->db->get('news');
+		$this->db->limit(10*($page-1),10);
+		return $query->result_array();
 	}
+
 	public function get_news_list()
 	{
 		//載入'分頁類'
@@ -59,6 +51,7 @@ class News_model extends CI_Model {
 		//limit(結果數，偏移量)
 		$this->db->limit($config['per_page'],10);
 		//查詢
+		
 		$query = $this->db->get('news');
 		//顯示結果列表
 		foreach ($query->result_array() as $row)

@@ -1,21 +1,19 @@
-/*排版
-div.tem_left{
-	float: left;
-	width: 10%;
-	margin: 0% 1% 0% 1%;
+/*moodular*/
+#moodular {
+	overflow: hidden;
 }
-div.medium{
-	float: left;	
-	width: 60%;
-	margin: 0% 1% 0% 1%;	
+#moodular, #moodular li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 100%;
+	height: 100%;
+}
+button.btn {
+	width: 35px;
+	height: 25px;
 }
 
-div.tem_right{
-	float: left;
-	width: 30%;
-	margin: 0% 1% 0% 1%;
-}
-*/
 a.link{
 	color: #4A67FF;
 
