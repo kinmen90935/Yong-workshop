@@ -2,7 +2,8 @@
   $this->load->view('templates/header');
 ?>
 <!--計畫管考-->  
-  <div class="col span_7_of_12"> 
+<div class="inner">
+  <div class="col span_10_of_12"> 
     <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
       <a class="link" href="news">首頁</a>>計畫管考
     </p>
@@ -24,7 +25,7 @@
       </div>      
     </div>
   </div>
-  
+</div> 
 <?php
   $this->load->view('templates/footer');
 ?>

@@ -48,12 +48,12 @@
 			    <div class="inner">
 				    <ul id="nav" class="clearfix">
 				        <li><a href="<?=base_url()?>news">最新消息</a></li>
-				        <li><a href="<?=base_url()?>pages/introduce">計畫介紹</a></li>
-				        <li><a href="<?=base_url()?>pages/plan">主軸計畫</a></li>
-				        <li><a href="<?=base_url()?>pages/achievement">成果專區</a></li>
-				        <li><a href="<?=base_url()?>pages/planExam">計劃管考</a></li>
+				        <li><a href="<?=base_url()?>intro/introduce">計畫介紹</a></li>
+				        <li><a href="<?=base_url()?>intro/plan">主軸計畫</a></li>
+				        <li><a href="<?=base_url()?>achieve">成果專區</a></li>
+				        <li><a href="<?=base_url()?>intro/planExam">計劃管考</a></li>
 				        <li><a href="<?=base_url()?>signup">活動報名</a></li>
-				        <li><a href="<?=base_url()?>pages/contact">聯絡我們</a></li>
+				        <li><a href="<?=base_url()?>intro/contact">聯絡我們</a></li>
 				    </ul>
 			    </div>
 			</div>

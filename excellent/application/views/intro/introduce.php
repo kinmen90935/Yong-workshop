@@ -2,12 +2,12 @@
   $this->load->view('templates/header');
 ?>
 <!--計畫介紹-->
-  <div class="col span_7_of_12"> 
+<div class="inner">
+  <div class="col span_10_of_12"> 
     <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
       <a class="link" href="news">首頁</a>>計畫介紹
     </p>
-    <div class="introduce">
-              
+    <div class="introduce">              
       <ul>
         <li><a href="#goal">計畫目標</a></li>
         <li><a href="#structure">組織架構</a></li>
@@ -17,6 +17,8 @@
         <p>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本校自1895年創校迄今已有119年，橫跨三世紀，培育無數的經師與人師，以往的教育模式極為成功。然而邁入21世紀，未來的學習不再侷限於書本，教學不再侷限於教室。21世紀為高知識經濟的時代，如何培育師生解決尚未成為問題的問題，教導學生使用尚未發明的科技，為目前尚不存在的工作做準備，其<b>關鍵的核心能力即為「就業競爭力」、「創新行動力」、「數位學習力」與「跨國移動力」。這也是高等教育因應21世紀未來學習的重要四力。</b>
         </P>
+        <p>&nbsp</p>
+        <p>&nbsp</p>
         <p>&nbsp</p>
         <p>&nbsp</p>
         <p>&nbsp</p>
@@ -38,6 +40,7 @@
           <img src="<?=base_url()?>assets/images/structure2.png" style="width:100%; height:100%"/> 
         </div>
       </div>
+    </div>
   </div>
 </div>
 <?php

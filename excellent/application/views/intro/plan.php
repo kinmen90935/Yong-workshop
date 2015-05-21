@@ -2,8 +2,8 @@
   $this->load->view('templates/header');
 ?>
 <!--主軸計畫-->
-
-  <div class="col span_7_of_12"> 
+<div class="inner">
+  <div class="col span_10_of_12"> 
     <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
       <a class="link" href="news">首頁</a>>主軸計畫
     </p>
@@ -15,6 +15,7 @@
         <li><a href="#main_3">主軸三</a></li>
         <li><a href="#main_4">主軸四</a></li>
       </ul>
+
       <div id="pStructure">
         <p>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本校教學卓越計畫，除扣緊本校103年至108年的中長程發展計畫外，並以培養21世紀學習者未來學習的重要四力～「就業競爭力」、「創新行動力」、「數位學習力」與「跨國移動力」為核心，並貫穿於「活化教學、跨域合作」、「無所不在、跨國移動」、「職涯發展、就業創業」與「實務課程、特色人才」等四大執行主軸。每一執行主軸因其重點不同規劃2～4個子計畫，共計10個子計畫。然而，每一主軸、每一個子計畫，都涵蓋「就業競爭力」、「創新行動力」、「數位學習力」與「跨國移動力」其中的二力至四力，藉此達成「強化學用合一」及「提升就業競爭力」的最終目標。<br>
@@ -51,8 +52,6 @@
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本計畫本著「學習成效本位」的精神，建構本校學生從第一哩到最後一哩的全方位支持系統與輔導機制，並依據學生特質、不同學習階段需求的多元性，提供符合差異性需求的資源與輔導，營造學生能樂在學習、能力加值。此外，亦建構學生學習長期資料庫，以回饋給教學單位及教師，以提升課程及教學的成效。</P>
           <img src="<?=base_url()?>assets/images/main1_3.png" style="width:100%; height:100%;"/> 
         </div>
-
-
       </div>
       <div id="main_2" >
         <div style="font-size:12pt;color:red;"><b>教學卓越計畫</b></div>
@@ -74,8 +73,6 @@
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本計畫旨在建構強化學生跨國移動力的國際化教學與學習環境，並以「國際化教學設計」、「國際化校園環境」「學生國際交流」為三大目標。</P>
           <img src="<?=base_url()?>assets/images/main2_2.png" style="width:100%; height:100%"/> 
         </div>  
-
-
       </div>
       <div id="main_3" >
         <div style="font-size:12pt;color:red;"><b>教學卓越計畫</b></div>
@@ -128,8 +125,13 @@
           <img src="<?=base_url()?>assets/images/main4_3.png" style="width:100%; height:100%;"/> 
         </div>
       </div>
+    </div>
   </div>
 </div>
+
+<?php
+  $this->load->view('templates/footer');
+?>
 <script type="text/javascript">
   $(document).ready(function(){
     $("#child_1").click(function(){
@@ -192,6 +194,4 @@
   
 </script>
 
-<?php
-  $this->load->view('templates/footer');
-?>
+

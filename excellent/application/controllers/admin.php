@@ -9,12 +9,13 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
-		//$data['login'] = $this->signup_model->get_signupDetail();
-		//$data['unit'] = $this->signup_model->get_unit();
-		//$data['title'] = 'Create a news item';		
-		
-		//$this->load->view('templates/left_aside', $data);
-		$this->load->view('admin/login');
+		$this->login();
+	}
+
+	public function login()
+	{
+		$data['title'] = '後台管理';
+	    $this->load->view('admin/login', $data);
 	}
 
 	public function ajax_login()
@@ -47,10 +48,7 @@ class Admin extends CI_Controller {
 	}
 	public function home()
 	{
-		$this->load->view('templates/header');
 		$this->load->view('admin/home');
-		$this->load->view('templates/right_aside');
-		$this->load->view('templates/footer');
 	}
 
 }

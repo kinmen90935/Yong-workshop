@@ -1,5 +1,5 @@
 <?php
-class Signups_model extends CI_Model {
+class Achieve_model extends CI_Model {
 
 	public function __construct()
 	{
