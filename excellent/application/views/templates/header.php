@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>教學卓越計畫</title>
 	<?php
 		echo "<script src='".base_url()."assets/jquery-1.11.2.min.js'></script>";
 		echo "<script src='".base_url()."assets/jquery-ui.min.js'></script>";

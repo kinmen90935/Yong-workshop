@@ -22,16 +22,6 @@ class Admin extends CI_Controller {
 	{	
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
-		//echo "JI";
-		//$data['adminDetail'] = $this->admin_model->select_admin($username);
-		/*if($adminDetail==TRUE)
-		{
-			header("Location:".base_url());
-		}
-		if($adminDetail==FALSE)
-		{
-			header("Location:".base_url()."admin");
-		}*/
 		if($username=="")
 		{
 			echo json_encode(array('status' => false, 'msg' => '請輸入帳號!'));
@@ -42,13 +32,26 @@ class Admin extends CI_Controller {
 		}
 		else 
 		{	
-			$data['adminDetail'] = $this->admin_model->select_admin($username);
-			echo json_encode(array('status' => true, 'msg' => '登入成功!'));
+			$data['adminDetail'] = $this->admin_model->select_admin($username,$password);
+			if($data['adminDetail'])
+			{
+				echo json_encode(array('status' => true, 'msg' => '登入成功!'));
+			}
+			else
+			{
+				echo json_encode(array('status' => false, 'msg' => '帳號或密碼錯誤!'));		
+			}
+			
 		}
 	}
 	public function home()
 	{
+		if (!$this->session->userdata('m_id')) 
+		{
+            header("location: /admin");
+        }
 		$this->load->view('admin/home');
+		//$this->session->unset_userdata('m_id');
 	}
 
 }

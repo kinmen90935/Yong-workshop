@@ -4,7 +4,7 @@
     <title>國立臺北教育大學教發中心後臺管理系統</title>
     <style type="text/css">
       body {background-color: #EFEFEF}
-      #container {width: 400px;margin: 0 auto; position: relative;margin-top: 100px;}
+      #container {width: 400px;margin: 0 auto; position: relative;margin-top: 100px; text-align: center;}
       #login_form {
         margin-right: auto;
         margin-left: auto;
@@ -74,7 +74,10 @@
   </head>
   <body>
     <div id="container">
-      <img src="<?=base_url()?>assets/images/logo2.png" width='400' alt="教發中心後臺登入頁面" title="教發中心後臺登入頁面">
+      <img src="<?=base_url()?>assets/images/logo.png" width='200' alt="教發中心後臺登入頁面">
+      <h2>
+        教學卓越後台登入系統
+      </h2>
       <form id="login_form" method="post">
         <input type="text" placeholder="帳號" id="username" name="username"/><br>
         <div class="alert alert-danger" style="display:none"></div>

@@ -4,19 +4,22 @@
           console.log("abc");
           var username = $("input[name=username]").val();
           var password = $("input[name=password]").val();
+          console.log("ZZZ");
           $.ajax({
             url : "admin/ajax_login",
             type: "POST",
             data : {'username' : username ,'password' : password},
             dataType: 'json',
             success:function(rtn, textStatus, jqXHR) {
-              if (rtn.status) {
+              if (rtn.status) 
+              {
                 window.location.href = "admin/home";
                 console.log("def");
-                //$('.alert-success').show().html(rtn.msg);
-               // $('.alert-danger').hide();
-              } else {
-                //$('.alert-danger').show().html(rtn.msg);
+              } 
+              else 
+              {
+                alert(rtn.msg);
+                $('#login_form')[0].reset();
               }
             },
             error: function(jqXHR, textStatus, errorThrown) {
