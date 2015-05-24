@@ -1,12 +1,9 @@
 <?php
   $this->load->view('templates/header');
 ?>
-<!--計畫管考-->  
+<div class="top" style="background-color:#B6DEBE;">計畫管考</div>
 <div class="inner">
   <div class="col span_10_of_12"> 
-    <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
-      <a class="link" href="news">首頁</a>>計畫管考
-    </p>
     <div class="introduce">
               
       <ul>

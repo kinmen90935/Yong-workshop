@@ -14,17 +14,20 @@ class Signup extends CI_Controller {
 
 	public function signuplist()
 	{
-		$data['title'] = '活動報名';
+		$data['title'] = '活動列表';
 		$data['signup'] = $this->signup_model->get_signup();
-		
+		foreach ($data['signup'] as $key => $row) {
+			$this->signup_model->get_signup_count($row['s_id']);
+		}
+		$data['signup'] = $this->signup_model->get_signup();
 		$this->load->view('signup/signuplist', $data);
 	}
 
 	public function signupdetail($s_id)
 	{
-		$data['signupDetail'] = $this->signup_model->get_signupDetail($s_id);
-		$data['unit'] = $this->signup_model->get_unit();
-		$data['title'] = '報名活動';		
+		$data['title'] = '報名活動';
+		$data['signupDetail'] = $this->signup_model->get_signup($s_id);
+		$data['unit'] = $this->signup_model->get_unit();				
 
 		$this->load->view('signup/signupdetail', $data);
 	}
@@ -41,7 +44,7 @@ class Signup extends CI_Controller {
 		$phone = $this->input->post('phone');
 		$food = $this->input->post('food');
 		$ps = $this->input->post('ps');
-		$signupDetail = $this->signup_model->get_signupDetail($s_id);
+		$signupDetail = $this->signup_model->get_signup($s_id);
 		if (!$s_id) {
 			echo json_encode(array('status' => false, 'msg' => '失敗'));
 		} else if($name==''){

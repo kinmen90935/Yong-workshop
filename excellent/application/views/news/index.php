@@ -1,16 +1,12 @@
 <?php
 	$this->load->view('templates/header');
 ?>
-<div class="inner">
-	<div class="col span_12_of_12">
-		<ul id="moodular" style="width:900px;height:300px;">			
-			<li><img src="<?= base_url('/assets/images/image_3.jpg');?>">123</li>
-			<li><img src="<?= base_url('/assets/images/image_2.jpg');?>">123</li>
-			<li><img src="<?= base_url('/assets/images/image_1.jpg');?>">123</li>
-		</ul>
-		<button id="prev" class="btn"><i class="ui-icon ui-icon-carat-1-w"></i></button>
-		<button id="next" class="btn"><i class="ui-icon ui-icon-carat-1-e"></i></button>
-	</div>
+<div class="top_slider">
+	<ul id="moodular">			
+		<li><img src="<?= base_url('/assets/images/image_3.jpg');?>">123</li>
+		<li><img src="<?= base_url('/assets/images/image_2.jpg');?>">123</li>
+		<li><img src="<?= base_url('/assets/images/image_1.jpg');?>">123</li>
+	</ul>
 </div>
 
 <div class="inner">

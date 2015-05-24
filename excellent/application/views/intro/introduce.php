@@ -1,12 +1,9 @@
 <?php
   $this->load->view('templates/header');
 ?>
-<!--計畫介紹-->
+<div class="top" style="background-color:#BE83B6;">計畫介紹</div>
 <div class="inner">
   <div class="col span_10_of_12"> 
-    <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
-      <a class="link" href="news">首頁</a>>計畫介紹
-    </p>
     <div class="introduce">              
       <ul>
         <li><a href="#goal">計畫目標</a></li>

@@ -74,7 +74,7 @@ li {
 #headerContainer {
   width: 100%;
   height: 1%;
-  border-top: 5px solid #8DC21F;
+  border-top: 5px solid #CE96C1;
 }
 
 #header {
@@ -136,7 +136,7 @@ section {
 /*footer*/
 #footerContainer {
     width: 100%;
-    background-color: #44208C;
+    background-color: #A0589F;
 }
 footer {
   clear: both;
@@ -153,6 +153,20 @@ footer {
 .wrap {
 	float: left;
 	width: 100%;
+}
+
+.top{
+  width: 100%;
+  height: 100px;
+  padding-left: 10%;
+  color: #FFFFFF;
+  font-size: 40px;
+  -webkit-box-shadow: #868686 0 0px 10px -1px;
+}
+
+.top_slider{
+  width: 100%;
+  height: 300px;
 }
 
 .inner{
