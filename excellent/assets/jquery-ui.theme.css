@@ -8,7 +8,11 @@
  *
  * http://api.jqueryui.com/category/theming/
  *
+<<<<<<< HEAD
  * To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Verdana%2CArial%2Csans-serif&fwDefault=bold&fsDefault=15px&cornerRadius=0px&bgColorHeader=%23e0a252&bgTextureHeader=flat&bgImgOpacityHeader=75&borderColorHeader=%23aaaaaa&fcHeader=%23222222&iconColorHeader=%23f580e0&bgColorContent=%23ffffff&bgTextureContent=spotlight&bgImgOpacityContent=75&borderColorContent=%23aaaaaa&fcContent=%23222222&iconColorContent=%23222222&bgColorDefault=%23FDD660&bgTextureDefault=glow_ball&bgImgOpacityDefault=75&borderColorDefault=%23d3d3d3&fcDefault=%23555555&iconColorDefault=%23888888&bgColorHover=%23FFFBA8&bgTextureHover=spotlight&bgImgOpacityHover=75&borderColorHover=%23999999&fcHover=%23DB227B&iconColorHover=%23dc56a0&bgColorActive=%23ffffff&bgTextureActive=glass&bgImgOpacityActive=65&borderColorActive=%23aaaaaa&fcActive=%23212121&iconColorActive=%23454545&bgColorHighlight=%23fbf9ee&bgTextureHighlight=glass&bgImgOpacityHighlight=55&borderColorHighlight=%23fcefa1&fcHighlight=%23363636&iconColorHighlight=%232e83ff&bgColorError=%23fef1ec&bgTextureError=glass&bgImgOpacityError=95&borderColorError=%23cd0a0a&fcError=%23cd0a0a&iconColorError=%23cd0a0a&bgColorOverlay=%23aaaaaa&bgTextureOverlay=flat&bgImgOpacityOverlay=0&opacityOverlay=30&bgColorShadow=%23aaaaaa&bgTextureShadow=flat&bgImgOpacityShadow=50&opacityShadow=30&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=8px
+=======
+ * To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Verdana%2CArial%2Csans-serif&fwDefault=bold&fsDefault=15px&cornerRadius=0px&bgColorHeader=%23e0a252&bgTextureHeader=flat&bgImgOpacityHeader=75&borderColorHeader=%23aaaaaa&fcHeader=%23222222&iconColorHeader=%23913a93&bgColorContent=%23ffffff&bgTextureContent=spotlight&bgImgOpacityContent=75&borderColorContent=%23aaaaaa&fcContent=%23222222&iconColorContent=%23F29338&bgColorDefault=%23FDD660&bgTextureDefault=glow_ball&bgImgOpacityDefault=75&borderColorDefault=%23d3d3d3&fcDefault=%23555555&iconColorDefault=%23f47911&bgColorHover=%23FFFBA8&bgTextureHover=spotlight&bgImgOpacityHover=75&borderColorHover=%23999999&fcHover=%23DB227B&iconColorHover=%23dc56a0&bgColorActive=%23ffffff&bgTextureActive=glass&bgImgOpacityActive=65&borderColorActive=%23aaaaaa&fcActive=%23212121&iconColorActive=%23454545&bgColorHighlight=%23fbf9ee&bgTextureHighlight=glass&bgImgOpacityHighlight=55&borderColorHighlight=%23fcefa1&fcHighlight=%23363636&iconColorHighlight=%232e83ff&bgColorError=%23fef1ec&bgTextureError=glass&bgImgOpacityError=95&borderColorError=%23cd0a0a&fcError=%23cd0a0a&iconColorError=%23cd0a0a&bgColorOverlay=%23aaaaaa&bgTextureOverlay=flat&bgImgOpacityOverlay=0&opacityOverlay=30&bgColorShadow=%23aaaaaa&bgTextureShadow=flat&bgImgOpacityShadow=50&opacityShadow=30&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=8px
+>>>>>>> 230e6e72eb22b8fe4d9262c0649caf4a04b77550
  */
 
 
@@ -163,6 +167,7 @@
 }
 .ui-icon,
 .ui-widget-content .ui-icon {
+<<<<<<< HEAD
 	background-image: url("images/ui-icons_222222_256x240.png");
 }
 .ui-widget-header .ui-icon {
@@ -170,6 +175,15 @@
 }
 .ui-state-default .ui-icon {
 	background-image: url("images/ui-icons_888888_256x240.png");
+=======
+	background-image: url("images/ui-icons_F29338_256x240.png");
+}
+.ui-widget-header .ui-icon {
+	background-image: url("images/ui-icons_913a93_256x240.png");
+}
+.ui-state-default .ui-icon {
+	background-image: url("images/ui-icons_f47911_256x240.png");
+>>>>>>> 230e6e72eb22b8fe4d9262c0649caf4a04b77550
 }
 .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon {

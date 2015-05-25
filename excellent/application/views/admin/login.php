@@ -1,10 +1,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>國立臺北教育大學教發中心後臺管理系統</title>
+    <title>教學卓越後台管理系統</title>
     <style type="text/css">
       body {background-color: #EFEFEF}
-      #container {width: 400px;margin: 0 auto; position: relative;margin-top: 100px;}
+      #container {width: 400px;margin: 0 auto; position: relative;margin-top: 100px; text-align: center;}
       #login_form {
         margin-right: auto;
         margin-left: auto;
@@ -70,11 +70,13 @@
       }
     </style>
     <script src=<?php echo base_url();?>assets/jquery-1.11.2.min.js></script>
-    <script src=<?php echo base_url();?>assets/jquery-login.js></script>
   </head>
   <body>
     <div id="container">
-      <img src="<?=base_url()?>assets/images/logo2.png" width='400' alt="教發中心後臺登入頁面" title="教發中心後臺登入頁面">
+      <img src="<?=base_url()?>assets/images/logo.png" width='200' alt="教發中心後臺登入頁面">
+      <h2>
+        教學卓越後台登入系統
+      </h2>
       <form id="login_form" method="post">
         <input type="text" placeholder="帳號" id="username" name="username"/><br>
         <div class="alert alert-danger" style="display:none"></div>
@@ -85,6 +87,38 @@
         <input type="submit" class="btn" id="btnLogin" value="登入"></input>
       </form>
     </div>
-    
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('#login_form').submit(function(e) {
+          e.preventDefault(); 
+          console.log("abc");
+          var username = $("input[name=username]").val();
+          var password = $("input[name=password]").val();
+          console.log("ZZZ");
+          $.ajax({
+            url : '<?= base_url()?>admin/ajax_login',
+            type: "POST",
+            data : {'username' : username ,'password' : password},
+            dataType: 'json',
+            success:function(rtn, textStatus, jqXHR) {
+              if (rtn.status) 
+              {
+                window.location.href = "<?= base_url()?>admin/home";
+                console.log("def");
+              } 
+              else 
+              {
+                alert(rtn.msg);
+                $('#login_form')[0].reset();
+              }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+              console.log(jqXHR.responseText);
+                  //if fails
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

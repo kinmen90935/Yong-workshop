@@ -24,39 +24,19 @@ class News extends CI_Controller {
 		$page = $this->input->post('page');
 
 		$data['news'] = $this->news_model->get_news($page);
+		$data['news_number'] = $this->news_model->get_news_number();
+		$data['page'] = $page;
+		
+		$news = $this->load->view('news/ajax_news_list',$data,true);
+		$pages = $this->load->view('news/ajax_pg',$data,true);
 
-
-		$news = $this->load->view('ajax_news_list',$data,true);
-		$page = $this->load->view('ajax_pg');
-
-		echo json_encode(array('status' => true, 'news' => $news));
-	}
-
-	public function view($offset)
-	{
-		$data['news'] = $this->news_model->get_news();
-		$data['title'] = '最新消息';
-
-		$this->load->view('templates/header', $data);
-		$this->news_model->get_news_list2($offset);
-		$this->load->view('news/index');
-		$this->load->view('templates/right_aside', $data);
-		$this->load->view('templates/footer');
+		echo json_encode(array('status' => true, 'news' => $news, 'page' => $pages));
 	}
 
 	public function news_complete($slug)
 	{
-		$query = $this->news_model->get_news($slug);
-		foreach ($query->result_array() as $row)
-		{
-			
-		}
-
-		$this->load->view('templates/header');
-		$this->load->view('news/view', $row);
-		//$this->load->view('templates/right_aside');
-		$this->load->view('templates/footer');
-
+		$data = $this->news_model->get_news_complete($slug);	
+		$this->load->view('news/view', $data);
 	}
 
 }

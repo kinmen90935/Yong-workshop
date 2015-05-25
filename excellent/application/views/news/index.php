@@ -10,7 +10,11 @@
 			page = page;
 		console.log("function_page");
 		$.ajax({
+<<<<<<< HEAD
 	            url : "news/ajax_news_list",
+=======
+	            url : "<?=base_url()?>news/ajax_news_list",
+>>>>>>> 230e6e72eb22b8fe4d9262c0649caf4a04b77550
 	            type: "POST",
 	            data : {'page' : page},
 	            dataType: 'json',
@@ -50,14 +54,21 @@
 <title><?php echo $title;?></title>
 <div class="top_slider">
 	<ul id="moodular">			
+<<<<<<< HEAD
 		<li><img src="<?= base_url('/assets/images/image_3.jpg');?>">123</li>
 		<li><img src="<?= base_url('/assets/images/image_2.jpg');?>">123</li>
 		<li><img src="<?= base_url('/assets/images/image_1.jpg');?>">123</li>
+=======
+		<li><img src="<?= base_url('/assets/images/image_1.jpg');?>"></li>
+		<li><img src="<?= base_url('/assets/images/image_2.jpg');?>"></li>
+		<li><img src="<?= base_url('/assets/images/image_3.jpg');?>"></li>
+>>>>>>> 230e6e72eb22b8fe4d9262c0649caf4a04b77550
 	</ul>
 </div>
 
 <div class="inner">
 	<div class="col span_8_of_12">
+<<<<<<< HEAD
 		<div class="col span_12_of_12">
 		    <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
 		      首頁
@@ -75,6 +86,20 @@
 		  <span class="ui-icon ui-icon-play" ></span>
 		  職涯百工圖
 		</p>
+=======
+		<div class="title">
+			<p>最新消息</P>
+		</div>
+		<div id="news">
+		</div>	
+		<div id="pg" data-role="page">
+		</div>
+	</div>
+	<div class="col span_4_of_12" style="margin-top:20px;">
+		<div class="aside">
+			<p>職涯百工圖</P>
+		</div>
+>>>>>>> 230e6e72eb22b8fe4d9262c0649caf4a04b77550
 		<div class="block">
 	        <p>職涯百工圖短片提供了各系所未來職涯發展的簡介，以訪問畢業學長姐及系所介紹的方式，用輕鬆易懂又深入的短片，引領同學瞭解各系所的出路，提供同學畢業後的方向指引。</p>
 	        <style type="text/css">
@@ -101,20 +126,6 @@
 	        </div>
 	        <div><i class="fa fa-arrow-circle-right"></i>&nbsp;<a style="line-height: 2.5em;" href="http://www.ntue.edu.tw/ppp" target="_blank"><span class="ui-icon ui-icon-link" ></span>更多百工圖..</a></div>
 	    </div>
-	    <div class="block">
-	        <h2><i class="fa fa-facebook fa-1x"></i>&nbsp;臉書連結</h2>
-	        <div>
-	            <div id="fb-root"></div>
-	            <script>(function(d, s, id) {
-	              var js, fjs = d.getElementsByTagName(s)[0];
-	              if (d.getElementById(id)) return;
-	              js = d.createElement(s); js.id = id;
-	              js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=328703957264466&version=v2.0";
-	              fjs.parentNode.insertBefore(js, fjs);
-	            }(document, 'script', 'facebook-jssdk'));</script>
-	            <div class="fb-like-box" data-href="https://www.facebook.com/pages/%E5%9C%8B%E7%AB%8B%E8%87%BA%E5%8C%97%E6%95%99%E8%82%B2%E5%A4%A7%E5%AD%B8/272630449513425?fref=ts" data-colorscheme="light" data-width="380" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
-	        </div>
-	    </div>
 	</div>
 </div>
 <!-- inner -->
@@ -123,6 +134,10 @@
 	$this->load->view('templates/footer');
 ?>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 230e6e72eb22b8fe4d9262c0649caf4a04b77550
 <style>
 	#page_nav
 	{
