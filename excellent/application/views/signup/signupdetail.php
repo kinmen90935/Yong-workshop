@@ -1,14 +1,25 @@
 <?php
     $this->load->view('templates/header');
 ?>
+<?php 
+    if ($signupDetail['end_date'] < time()) { ?>
+        <script type="text/javascript">            
+            alert("很抱歉! 報名已逾期");
+            history.back();
+        </script>
+        <?php exit;
+    } else if ($signupDetail['start_date'] > time()){ ?>
+        <script type="text/javascript">            
+            alert("還未開放報名喔!");
+            history.back();
+        </script>
+        <?php exit;
+    }
+?>
 <!--報名頁面-->
+<div class="top" style="background-color:#FFFFFF; color:#0077DD;">活動報名</div>
 <div class="inner">
-    <div class="col span_10_of_12">
-        <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
-          <a class="link" href="<?=base_url()?>news">首頁</a> > 
-          <a class="link" href="<?=base_url()?>signup">活動報名</a> >
-          <?php echo htmlspecialchars_decode($signupDetail['title']);?>
-        </p>
+    <div class="col span_10_of_12">        
     	<form id="formPost"  method="post" class="elegant-aero">
             <h1>《<?php echo htmlspecialchars_decode($signupDetail['title']);?>報名表單》</h1>
              <h4>活動期間</h4>
@@ -127,15 +138,16 @@
                 success:function(rtn, textStatus, jqXHR) {
                     if (rtn.status) {
                         $("#formPost")[0].reset();
-                        console.log(rtn.msg);
+                        console.log(jqXHR.responseText);
                         $('.alert-success').show().html(rtn.msg);
                          $('.alert-danger').hide();
                     } else {
-                        console.log(rtn.msg);
+                        console.log(jqXHR.responseText);
                         $('.alert-danger').show().html(rtn.msg);
                     }
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(jqXHR.responseText);
                 }
             });
        });

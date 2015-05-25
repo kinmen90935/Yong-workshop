@@ -48,10 +48,10 @@ class Admin extends CI_Controller {
 	{
 		if (!$this->session->userdata('m_id')) 
 		{
-            header("location: /admin");
+            header("location:".base_url()."admin/login");
         }
 		$this->load->view('admin/home');
-		//$this->session->unset_userdata('m_id');
+		$this->session->unset_userdata('m_id');
 	}
 
 }

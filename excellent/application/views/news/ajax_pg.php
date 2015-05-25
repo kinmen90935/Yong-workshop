@@ -1,11 +1,6 @@
 <ul class="pagination">
 	<li id="li-float" class="pages-pre">
 		<a href="#"><span  class="ui-icon  ui-icon-circle-arrow-w"></span></a>
-		<script>
-			//var b = $(".active");
-
-			//$(".pages-pre").data('page',page-1);
-		</script>
 	</li>
 	<?php 
 		for($i=0;$i<=$news_number;$i++)	{ 

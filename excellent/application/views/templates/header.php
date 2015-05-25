@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<title>教學卓越計畫</title>
 	<?php
 		echo "<script src='".base_url()."assets/jquery-1.11.2.min.js'></script>";
 		echo "<script src='".base_url()."assets/jquery-ui.min.js'></script>";
@@ -38,6 +39,7 @@
 	<div id="headerContainer">
 	    <div id="header" class="group">
 	    	<a id="logo" href="<?=base_url();?>news"><img src="<?=base_url();?>assets/images/logo.png" alt="" width="10%"></a>
+			
 	        <div id="headerArea">
 	            <a href="http://www.ntue.edu.tw" target="_blank" ><span class="ui-icon  ui-icon-home"></span>北教大首頁</a>
 	            <a href="http://ctld.ntue.edu.tw/" target="_blank" ><span class="ui-icon  ui-icon-home"></span>教學發展中心首頁</a>

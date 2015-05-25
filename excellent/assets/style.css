@@ -20,7 +20,15 @@ border-radius: 4px;
 /*首頁消息區*/
 .news {
     margin-left: -20px;
+    padding: 20px;
+    -webkit-box-shadow: #868686 0 0px 10px -1px;
 }
+
+#news {
+    margin-left: -20px;
+    -webkit-box-shadow: #868686 0 0px 10px -1px;
+}
+
 .news .date {
     font-size: 12px;
     color: #666;

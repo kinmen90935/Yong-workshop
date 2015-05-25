@@ -1,12 +1,9 @@
 <?php
   $this->load->view('templates/header');
 ?>
-<!--主軸計畫-->
+<div class="top" style="background-color:#8DC21F;">主軸計畫</div>
 <div class="inner">
   <div class="col span_10_of_12"> 
-    <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
-      <a class="link" href="news">首頁</a>>主軸計畫
-    </p>
     <div class="plan">              
       <ul>
         <li><a href="#pStructure">計畫架構</a></li>          
@@ -28,14 +25,14 @@
         <div style="font-size:12pt;color:red;"><b>教學卓越計畫</b></div>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本校教學卓越計畫以「活化教學、跨域合作」、「無所不在、跨國移動」、「職涯發展、就業創業」、「實務課程、特色人才」為四大執行主軸，下有對應的10個子計畫。</P>
           <p style="font-size:12pt;color:red;"><b>主軸一：「活化教學　跨域合作」</b></p>
-        <div class="col span_4_of_12" id="child_1" style="background:#F43636; width:100px; height:100px;">
-          <p style="margin:30px 10px 20px 10px; font-size:14pt;"><b>子計畫一</b></p>
+        <div class="choose" id="child_1" style="background-color:#F43636; ">
+          <p><b>子計畫一</b></p>
         </div>
-        <div class="col span_4_of_12" id="child_2" style="background:#A2CA09; width:100px; height:100px;">
-          <p style="margin:30px 10px 20px 10px; font-size:14pt;"><b>子計畫二</b></p>
+        <div class="choose" id="child_2" style="background:#A2CA09;">
+          <p><b>子計畫二</b></p>
         </div>
-        <div class="col span_4_of_12" id="child_3" style="background:#FFAB00; width:100px; height:100px;">
-          <p style="margin:30px 10px 20px 10px; font-size:14pt;"><b>子計畫三</b></p>
+        <div class="choose" id="child_3" style="background:#FFAB00;">
+          <p><b>子計畫三</b></p>
         </div>
         <div id="replace1" style="margin-top:140px;">
           <p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【計畫1】活化教育大學課堂教學~ NTUE教學魔法師</b></p>
@@ -57,11 +54,11 @@
         <div style="font-size:12pt;color:red;"><b>教學卓越計畫</b></div>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本校教學卓越計畫以「活化教學、跨域合作」、「無所不在、跨國移動」、「職涯發展、就業創業」、「實務課程、特色人才」為四大執行主軸，下有對應的10個子計畫。</P>
           <p style="font-size:12pt;color:red;"><b>主軸二：「無所不在　跨國移動」</b></p>
-        <div class="col span_4_of_12" id="child_4" style="background:#F43636; width:100px; height:100px;">
-          <p style="margin:30px 10px 20px 10px; font-size:14pt;"><b>子計畫四</b></p>
+        <div class="choose" id="child_4" style="background:#F43636;">
+          <p><b>子計畫四</b></p>
         </div>
-        <div class="col span_4_of_12" id="child_5" style="background:#A2CA09; width:100px; height:100px;">
-          <p style="margin:30px 10px 20px 10px; font-size:14pt;"><b>子計畫五</b></p>
+        <div class="choose" id="child_5" style="background:#A2CA09;">
+          <p><b>子計畫五</b></p>
         </div>
         <div id="replace4" style="margin-top:140px;">
           <p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【計畫4】學習無所不在～ 整合式行動學習網與課業輔導APP</b></p>
@@ -78,11 +75,11 @@
         <div style="font-size:12pt;color:red;"><b>教學卓越計畫</b></div>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本校教學卓越計畫以「活化教學、跨域合作」、「無所不在、跨國移動」、「職涯發展、就業創業」、「實務課程、特色人才」為四大執行主軸，下有對應的10個子計畫。</P>
           <p style="font-size:12pt;color:red;"><b>主軸三：「職涯發展　就業創業」</b></p>
-        <div class="col span_4_of_12" id="child_6" style="background:#F43636; width:100px; height:100px;">
-          <p style="margin:30px 10px 20px 10px; font-size:14pt;"><b>子計畫六</b></p>
+        <div class="choose" id="child_6" style="background:#F43636;">
+          <p><b>子計畫六</b></p>
         </div>
-        <div class="col span_4_of_12" id="child_7" style="background:#A2CA09; width:100px; height:100px;">
-          <p style="margin:30px 10px 20px 10px; font-size:14pt;"><b>子計畫七</b></p>
+        <div class="choose" id="child_7" style="background:#A2CA09;">
+          <p><b>子計畫七</b></p>
         </div>
         <div id="replace6" style="margin-top:140px;">
           <p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【計畫6】北教大2.0~ 志業、菁英、職涯陶塑</b></p>
@@ -100,14 +97,14 @@
         <div style="font-size:12pt;color:red;"><b>教學卓越計畫</b></div>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本校教學卓越計畫以「活化教學、跨域合作」、「無所不在、跨國移動」、「職涯發展、就業創業」、「實務課程、特色人才」為四大執行主軸，下有對應的10個子計畫。</P>
           <p style="font-size:12pt;color:red;"><b>主軸四：「實務課程　特色人才」</b></p>
-        <div class="col span_4_of_12" id="child_8" style="background:#F43636; width:100px; height:100px;">
-          <p style="margin:30px 10px 20px 10px; font-size:14pt;"><b>子計畫八</b></p>
+        <div class="choose" id="child_8" style="background:#F43636;">
+          <p><b>子計畫八</b></p>
         </div>
-        <div class="col span_4_of_12" id="child_9" style="background:#A2CA09; width:100px; height:100px;">
-          <p style="margin:30px 10px 20px 10px; font-size:14pt;"><b>子計畫九</b></p>
+        <div class="choose" id="child_9" style="background:#A2CA09;">
+          <p><b>子計畫九</b></p>
         </div>
-        <div class="col span_4_of_12" id="child_10" style="background:#FFAB00; width:100px; height:100px;">
-          <p style="margin:30px 10px 20px 10px; font-size:14pt;"><b>子計畫十</b></p>
+        <div class="choose" id="child_10" style="background:#FFAB00;">
+          <p><b>子計畫十</b></p>
         </div>
         <div id="replace8" style="margin-top:140px;">
           <p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【計畫8】正念教育特色人才培育</b></p>

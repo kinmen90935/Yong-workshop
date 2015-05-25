@@ -1,7 +1,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>國立臺北教育大學教發中心後臺管理系統</title>
+    <title>教學卓越後台管理系統</title>
     <style type="text/css">
       body {background-color: #EFEFEF}
       #container {width: 400px;margin: 0 auto; position: relative;margin-top: 100px; text-align: center;}
@@ -70,7 +70,6 @@
       }
     </style>
     <script src=<?php echo base_url();?>assets/jquery-1.11.2.min.js></script>
-    <script src=<?php echo base_url();?>assets/jquery-login.js></script>
   </head>
   <body>
     <div id="container">
@@ -88,6 +87,38 @@
         <input type="submit" class="btn" id="btnLogin" value="登入"></input>
       </form>
     </div>
-    
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('#login_form').submit(function(e) {
+          e.preventDefault(); 
+          console.log("abc");
+          var username = $("input[name=username]").val();
+          var password = $("input[name=password]").val();
+          console.log("ZZZ");
+          $.ajax({
+            url : '<?= base_url()?>admin/ajax_login',
+            type: "POST",
+            data : {'username' : username ,'password' : password},
+            dataType: 'json',
+            success:function(rtn, textStatus, jqXHR) {
+              if (rtn.status) 
+              {
+                window.location.href = "<?= base_url()?>admin/home";
+                console.log("def");
+              } 
+              else 
+              {
+                alert(rtn.msg);
+                $('#login_form')[0].reset();
+              }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+              console.log(jqXHR.responseText);
+                  //if fails
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
