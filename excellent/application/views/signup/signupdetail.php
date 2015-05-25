@@ -17,11 +17,7 @@
     }
 ?>
 <!--報名頁面-->
-<<<<<<< HEAD
-
-=======
 <div class="top" style="background-color:#FFFFFF; color:#0077DD;">活動報名</div>
->>>>>>> 230e6e72eb22b8fe4d9262c0649caf4a04b77550
 <div class="inner">
     <div class="col span_10_of_12">        
     	<form id="formPost"  method="post" class="elegant-aero">

@@ -10,11 +10,7 @@
 			page = page;
 		console.log("function_page");
 		$.ajax({
-<<<<<<< HEAD
-	            url : "news/ajax_news_list",
-=======
 	            url : "<?=base_url()?>news/ajax_news_list",
->>>>>>> 230e6e72eb22b8fe4d9262c0649caf4a04b77550
 	            type: "POST",
 	            data : {'page' : page},
 	            dataType: 'json',
@@ -54,39 +50,14 @@
 <title><?php echo $title;?></title>
 <div class="top_slider">
 	<ul id="moodular">			
-<<<<<<< HEAD
-		<li><img src="<?= base_url('/assets/images/image_3.jpg');?>">123</li>
-		<li><img src="<?= base_url('/assets/images/image_2.jpg');?>">123</li>
-		<li><img src="<?= base_url('/assets/images/image_1.jpg');?>">123</li>
-=======
 		<li><img src="<?= base_url('/assets/images/image_1.jpg');?>"></li>
 		<li><img src="<?= base_url('/assets/images/image_2.jpg');?>"></li>
 		<li><img src="<?= base_url('/assets/images/image_3.jpg');?>"></li>
->>>>>>> 230e6e72eb22b8fe4d9262c0649caf4a04b77550
 	</ul>
 </div>
 
 <div class="inner">
 	<div class="col span_8_of_12">
-<<<<<<< HEAD
-		<div class="col span_12_of_12">
-		    <p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
-		      首頁
-		    </p>
-		</div>
-		<div id="news">
-			news
-		</div>	
-		<div id="pg" data-role="page">
-			pg
-		</div>
-	</div>
-	<div class="col span_4_of_12">
-		<p style="border-bottom-style:solid; border-width:medium; color:#4A67FF;">
-		  <span class="ui-icon ui-icon-play" ></span>
-		  職涯百工圖
-		</p>
-=======
 		<div class="title">
 			<p>最新消息</P>
 		</div>
@@ -99,7 +70,6 @@
 		<div class="aside">
 			<p>職涯百工圖</P>
 		</div>
->>>>>>> 230e6e72eb22b8fe4d9262c0649caf4a04b77550
 		<div class="block">
 	        <p>職涯百工圖短片提供了各系所未來職涯發展的簡介，以訪問畢業學長姐及系所介紹的方式，用輕鬆易懂又深入的短片，引領同學瞭解各系所的出路，提供同學畢業後的方向指引。</p>
 	        <style type="text/css">
@@ -134,10 +104,7 @@
 	$this->load->view('templates/footer');
 ?>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 230e6e72eb22b8fe4d9262c0649caf4a04b77550
 <style>
 	#page_nav
 	{
@@ -239,4 +206,3 @@
 	  padding: 4px;
 	}
 </style>
-

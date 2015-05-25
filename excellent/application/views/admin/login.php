@@ -103,7 +103,7 @@
             success:function(rtn, textStatus, jqXHR) {
               if (rtn.status) 
               {
-                window.location.href = "<?= base_url()?>admin/home";
+                window.location.href = "<?= base_url()?>admin/admin_home";
                 console.log("def");
               } 
               else 

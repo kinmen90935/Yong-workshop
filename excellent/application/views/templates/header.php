@@ -58,10 +58,6 @@
 				    </ul>
 			    </div>
 			</div>
-
 	    </div>
-
-    
 	</div>
-
 <div class="wrap" id="main">

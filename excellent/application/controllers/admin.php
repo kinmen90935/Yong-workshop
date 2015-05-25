@@ -9,7 +9,7 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
-		$this->login();
+		$this->admin_home();
 	}
 
 	public function login()
@@ -44,14 +44,24 @@ class Admin extends CI_Controller {
 			
 		}
 	}
-	public function home()
+	public function admin_home()
 	{
 		if (!$this->session->userdata('m_id')) 
 		{
             header("location:".base_url()."admin/login");
         }
-		$this->load->view('admin/home');
-		$this->session->unset_userdata('m_id');
+        $data['m_id'] = $this->session->userdata('m_id');
+        $data['username'] = $this->session->userdata('username');
+        $data['c_id'] = $this->session->userdata('c_id');
+        $data['nickname'] = $this->session->userdata('nickname');
+		$this->load->view('admin/admin_home',$data);
 	}
-
+	public function unset_session()
+	{
+		$this->session->unset_userdata('m_id');
+		if (!$this->session->userdata('m_id')) 
+		{
+            header("location:".base_url()."admin/login");
+        }
+	}
 }

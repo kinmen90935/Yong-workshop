@@ -13,6 +13,10 @@ class Admin_model extends CI_Model {
 		{
 			$newdata = array(
                'm_id' => $query->row()->m_id,
+               'username' => $query->row()->username,
+               'password' => $query->row()->password,
+               'c_id' => $query->row()->c_id,
+               'nickname' => $query->row()->nickname,
            	);
 			$this->session->set_userdata($newdata);
 			return true;

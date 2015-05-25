@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="col span_4_of_12">
-        Powered by Peng-Yan Sie, Pei-Ru Taung&nbsp;&nbsp;<a href="<?=base_url()?>admin/login"><i class="fa fa-user fa-1x"></i>&nbsp;後臺管理</a>
+        Powered by Peng-Yan Sie, Pei-Ru Taung&nbsp;&nbsp;<a href="<?=base_url()?>admin"><i class="fa fa-user fa-1x"></i>&nbsp;後臺管理</a>
         <p>瀏覽人次：
         	<span style="font-size:14px;">
 	        	<?php
