@@ -1,7 +1,7 @@
 <?php
   $this->load->view('templates/header');
 ?>
-<div class="top" style="background-color:#B6DEBE;">計畫管考</div>
+<div class="top" style="background-color:#559C00;">計畫管考</div>
 <div class="inner">
   <div class="col span_10_of_12"> 
     <div class="introduce">

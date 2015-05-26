@@ -1,20 +1,4 @@
 <div id="backtotop">↑</div>
-<script>//回頂端按鈕
-   
-    $("#backtotop").click(function(){
-        jQuery("html,body").animate({
-            scrollTop:0
-        },500);
-    });
-    $(window).scroll(function() {
-        if ( $(this).scrollTop() > 300){
-            $("#backtotop").fadeIn("fast");
-        } else {
-            $("#backtotop").stop().fadeOut("fast");
-        }
-    });
-</script>
-
 </div> <!-- wrap -->
 <div id="footerContainer" class="wrap">
 <footer>
@@ -79,5 +63,18 @@
     slices: [10, 4],
     mode : 'random'
   });
+  //回頂端按鈕   
+    $("#backtotop").click(function(){
+        jQuery("html,body").animate({
+            scrollTop:0
+        },500);
+    });
+    $(window).scroll(function() {
+        if ( $(this).scrollTop() > 300){
+            $("#backtotop").fadeIn("fast");
+        } else {
+            $("#backtotop").stop().fadeOut("fast");
+        }
+    });
 </script>
 </body></html>

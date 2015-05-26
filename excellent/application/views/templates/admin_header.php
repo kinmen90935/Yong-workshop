@@ -12,9 +12,8 @@
 	</head>
 	<body>
 		<style type="text/css">
-			.admin_aside{
-				background-color: #B9D9EB;
-				padding: 40px 40px 40px 40px;
+			.admin_aside_user{
+				background-color: #F4F5F7;
 			}
 		</style>
 		<div>
