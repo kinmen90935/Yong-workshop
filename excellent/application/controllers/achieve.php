@@ -17,7 +17,7 @@ class Achieve extends CI_Controller {
 		$data['title'] = '成果專區';
 		//$data['signup'] = $this->signup_model->get_signup();
 		
-		$this->load->view('achieve/achievement', $data);
+		$this->load->view('achieve/achievelist', $data);
 	}
 
 }
