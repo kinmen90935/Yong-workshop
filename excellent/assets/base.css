@@ -156,9 +156,10 @@ footer {
 }
 
 .top{
-  width: 100%;
+  width: 90%;
   height: 100px;
   padding-left: 10%;
+  margin: 0 auto;
   color: #FFFFFF;
   font-size: 40px;
   -webkit-box-shadow: #868686 0 0px 10px -1px;
