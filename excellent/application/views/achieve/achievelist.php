@@ -4,7 +4,7 @@
 <div class="top" style="background-color:#F7AF00;">成果專區</div>
 <div class="inner">
 	<div class="col span_10_of_12">
-		<img src="<?=base_url();?>assets/images/coming-soon.jpg" alt="" width="50%">
+		<embed src="<?=base_url();?>assets/images/coming_soon.swf" width="1000px" height="400px"/>
 	</div>
 	
 </div>
