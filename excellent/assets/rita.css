@@ -91,6 +91,30 @@ td {
     box-shadow:inset 3px 3px 3px rgba(20%,20%,40%,0.5);
 }
 
+.planEntr{
+    float: left;
+    width:165px; 
+    height:60px;
+    margin: 10px 10px;
+    box-shadow: 5px 5px grey;
+    background-color:#F9BF00;
+    cursor: pointer;
+}
+
+.planEntr p{
+    font-size: 14pt;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+.planEntr:hover{
+    color: #FFF;
+    box-shadow: 0px 0px;
+
+}
+.planEntr:active{
+    color: #F1B8D5;
+    box-shadow:inset 3px 3px 3px rgba(20%,20%,40%,0.5);
+}
 #backtotop {
     display: none;
     position: fixed;

@@ -9,8 +9,11 @@
       <ul>
         <li><a href="#exam">計畫管考</a></li>
       </ul>
-      <div id="exam">        
-        <p style="font-size:16px;"><a href="http://program.ntue.edu.tw/login.php"><span class="ui-icon ui-icon-link" ></span>計畫管考系統入口</a></p>
+      <div id="exam">
+        <a  target="_blank" href="http://program.ntue.edu.tw/login.php">        
+          <div class="planEntr"><p>計畫管考系統入口</p></div>
+        </a> 
+        <br><br><br><br><br>
         <p style="color:red;"><b>計畫管考機制 </b></p>
 
         <p>
