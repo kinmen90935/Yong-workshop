@@ -5,6 +5,7 @@ class Signup extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('signup_model');
+		 date_default_timezone_set('Asia/Taipei');
 	}
 
 	public function index()
