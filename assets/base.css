@@ -71,10 +71,35 @@ li {
 
 
 /* 至頂 */
+#top_nav {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: #97529C;
+}
+#top_nav #headerArea {
+  width: 1000px;
+  margin: 0 auto;
+  font-size: 13px;
+  font-weight: 100;
+  text-align: right;
+  color: #fff;
+  line-height: 2em;
+}
+#top_nav #headerArea ul{
+  margin: 0;
+  padding: 0;
+}
+#top_nav #headerArea ul li{
+  display: inline-block;
+  margin-right: 7px;
+}
+#top_nav #headerArea ul li a {
+  color: #fff;
+}
 #headerContainer {
   width: 100%;
-  height: 1%;
-  border-top: 5px solid #CE96C1;
+  height: 80px;
 }
 
 #header {
@@ -91,12 +116,7 @@ li {
   list-style: none;
 
 }
-#header li {
-  display: inline-block;
-  float: left;
-  padding: 0 25px;
-  border-right: 1px dashed #999999;
-}
+
 #header a {
   color: #3C3C3C;
   font-size: 14px;
@@ -108,7 +128,30 @@ li {
 #header #nav {
   position: absolute;
   bottom: 10px;
-  right: 40px;
+  right: 0;
+  margin: 0;
+}
+#header #nav li {
+  border-width: 2px;
+  border-bottom: solid;
+  display: inline-block;
+  float: left;
+  padding: 0px 15px 5px 15px;
+}
+#header #nav li.nav_news {
+  border-color: #2BA5DF;
+}
+#header #nav li.nav_introduce {
+  border-color: #E54585;
+}
+#header #nav li.nav_plan {
+  border-color: #F9B900;
+}
+#header #nav li.nav_achieve {
+  border-color: #E54585;
+}
+#header #nav li.nav_planExam {
+  border-color: #2BAD36;
 }
 
 #logo{
@@ -119,7 +162,7 @@ li {
 }
 #logo img {
   border: none;
-  width: 110px;
+  width: 220px;
 }
 
 .current {
@@ -156,10 +199,9 @@ footer {
 }
 
 .top{
-  width: 90%;
+  width: 100%;
   height: 100px;
   padding-left: 10%;
-  margin: 0 auto;
   color: #FFFFFF;
   font-size: 40px;
   -webkit-box-shadow: #868686 0 0px 10px -1px;
@@ -421,7 +463,6 @@ footer a:hover,footer a:link{
     #header {
       height: 100px;
     }
-    #headerArea {display: none;}
     #logo {
       float: none;
 

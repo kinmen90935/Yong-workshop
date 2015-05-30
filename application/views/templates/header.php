@@ -35,28 +35,29 @@
   
 	</script>
 </head>
-<body style="height:90%;">
+<body>
+	<div id="top_nav">
+		<div id="headerArea">
+			<ul>
+				<li><a href="http://www.ntue.edu.tw" target="_blank" ><span class="ui-icon  ui-icon-home"></span>北教大首頁</a></li>
+				<li><a href="http://ctld.ntue.edu.tw/" target="_blank" ><span class="ui-icon  ui-icon-home"></span>教學發展中心首頁</a></li>
+			</ul>
+		</div>
+	</div>
 	<div id="headerContainer">
 	    <div id="header" class="group">
-	    	<a id="logo" href="<?=base_url();?>news"><img src="<?=base_url();?>assets/images/logo.png" alt="" width="10%"></a>
-			
-	        <div id="headerArea">
-	            <a href="http://www.ntue.edu.tw" target="_blank" ><span class="ui-icon  ui-icon-home"></span>北教大首頁</a>
-	            <a href="http://ctld.ntue.edu.tw/" target="_blank" ><span class="ui-icon  ui-icon-home"></span>教學發展中心首頁</a>
-	        </div>
-
-			<div class="clearfix">
-			    <div class="inner">
-				    <ul id="nav" class="clearfix">
-				        <li><a href="<?=base_url()?>news">最新消息</a></li>
-				        <li><a href="<?=base_url()?>intro/introduce">計畫介紹</a></li>
-				        <li><a href="<?=base_url()?>intro/plan">主軸計畫</a></li>
-				        <li><a href="<?=base_url()?>achieve">成果專區</a></li>
-				        <li><a href="<?=base_url()?>intro/planExam">計劃管考</a></li>
-				        <li><a href="<?=base_url()?>signup">活動報名</a></li>
-				        <li><a href="<?=base_url()?>intro/contact">聯絡我們</a></li>
-				    </ul>
-			    </div>
+	    	<a id="logo" href="<?=base_url();?>news"><img src="<?=base_url();?>assets/images/logo.png" alt=""></a>
+		    <div class="inner">
+			    <ul id="nav" class="clearfix">
+			        <li class="nav_news"><a href="<?=base_url()?>news">最新消息</a></li>
+			        <li class="nav_introduce"><a href="<?=base_url()?>intro/introduce">計畫介紹</a></li>
+			        <li class="nav_plan"><a href="<?=base_url()?>intro/plan">主軸計畫</a></li>
+			        <li class="nav_achieve"><a href="<?=base_url()?>achieve">成果專區</a></li>
+			        <li class="nav_planExam"><a href="<?=base_url()?>intro/planExam">計劃管考</a></li>
+			        <li><a href="<?=base_url()?>signup">活動報名</a></li>
+			        <li><a href="<?=base_url()?>intro/contact">聯絡我們</a></li>
+			    </ul>
+		    </div>
 			</div>
 	    </div>
 	</div>
