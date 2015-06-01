@@ -15,7 +15,8 @@
                 <p>
                     <?php echo htmlspecialchars_decode($content);?>
                 </p>
-            </div>             
+            </div>
+            <br><br><br><br><br><br><br><br>             
         </div>
     </div>
 <?php $this->load->view('templates/footer'); ?> 

@@ -30,8 +30,15 @@ border-radius: 4px;
     border-bottom: 1px dashed #ddd;
 }
 
-#news span{
-    color: #A0589F;
+#news a{
+    margin-left: 3px;
+    color:#9752BE;
+    line-height: 1.5em;
+    font-weight: normal;
+}
+
+#news a:hover {
+    color: #E75690;
 }
 
 .news .date {
