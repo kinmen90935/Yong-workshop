@@ -53,7 +53,7 @@
 			        <li class="nav_introduce"><a href="<?=base_url()?>intro/introduce">計畫介紹</a></li>
 			        <li class="nav_plan"><a href="<?=base_url()?>intro/plan">主軸計畫</a></li>
 			        <li class="nav_achieve"><a href="<?=base_url()?>achieve">成果專區</a></li>
-			        <li class="nav_planExam"><a href="<?=base_url()?>intro/planExam">計劃管考</a></li>
+			        <li class="nav_planExam"><a href="<?=base_url()?>intro/planExam">計畫管考</a></li>
 			        <li class="nav_signup"><a href="<?=base_url()?>signup">活動報名</a></li>
 			        <li class="nav_contact"><a href="<?=base_url()?>intro/contact">聯絡我們</a></li>
 			    </ul>

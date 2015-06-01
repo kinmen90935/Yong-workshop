@@ -847,7 +847,7 @@
 		pagination : function(m) {
 			var lis = '';
 			for (var i = 0; i < m.nbItems; i++)
-				lis += '<li><a href="#" data-index="' + i + '">' + (i + 1) + '</a></li>';
+				lis += '<li><a href="#" data-index="' + i + '">' + '●' + '</a></li>';
 			m.opts.pagination.append(lis);
 			$('>li>a', m.opts.pagination).on('click', function() {
 				if (!$(this).parent().hasClass('active'))

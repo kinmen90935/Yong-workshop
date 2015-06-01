@@ -1,4 +1,4 @@
-/*moodular*/
+/*slider*/
 #moodular {
 	overflow: hidden;
 }
@@ -9,15 +9,30 @@
 	width: 100%;
 	height: 100%;
 }
-
-a.link{
-	color: #4A67FF;
-
+#moodular img{
+    width: 100%;
+    height: 100%;
 }
-a:hover{
-	color: #DB468E;
+#index_wrapper{
+    margin-top: -2%;
+    z-index: 100;
+    display: block;
+    position: absolute;
+    text-align: center;
+    
 }
-
+#index_wrapper li{
+    display: inline-block;
+    padding: 0 10px;
+}
+#index_wrapper a{
+    color: #DDDDDD;
+    opacity: 0.5;
+}
+#index_wrapper a:hover{
+    opacity: 1;
+    color: #FFFFFF;
+}
 /*表格*/
 table {
     width: 100%;

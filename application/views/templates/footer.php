@@ -33,36 +33,7 @@
     </div>
 </footer>
 </div>
-<script type="text/javascript">
-  $('#moodular').moodular({
-  /* core parameters */
-    // effects separated by space
-    effects: 'mosaic',
-    // controls separated by space
-    controls: 'keys buttons',
-    // if you want some yummy transition
-    easing: '',
-    // step 
-    step: 10,
-    // selector is to specify the children of your element (tagName)
-    selector: 'li',
-    // if timer is 0 the carrousel isn't automatic, else it's the interval in ms between each step
-    timer: 5000,
-    // speed is the time in ms of the transition
-    speed: 2000,
-    // queuing animation ?
-    queue: false,
-  /* parameters for controls or effects */
-    // keys control
-    keyPrev: 37, // left key
-    keyNext: 39, // right key
-    // buttons control
-    buttonPrev: jQuery('#prev'),
-    buttonNext: jQuery('#next'),
-    // mosaic effects
-    slices: [10, 4],
-    mode : 'random'
-  });
+<script type="text/javascript">  
   //回頂端按鈕   
     $("#backtotop").click(function(){
         jQuery("html,body").animate({
@@ -75,6 +46,35 @@
         } else {
             $("#backtotop").stop().fadeOut("fast");
         }
+    });
+
+    $('#moodular').moodular({
+    /* core parameters */
+      // effects separated by space
+      effects: 'mosaic',
+      // controls separated by space
+      controls: 'keys pagination',
+      // if you want some yummy transition
+      easing: '',
+      // step 
+      step: 1,
+      // selector is to specify the children of your element (tagName)
+      selector: 'li',
+      // if timer is 0 the carrousel isn't automatic, else it's the interval in ms between each step
+      timer: 5000,
+      // speed is the time in ms of the transition
+      speed: 2000,
+      // queuing animation ?
+      queue: false,
+    /* parameters for controls or effects */
+      // keys control
+      keyPrev: 37, // left key
+      keyNext: 39, // right key
+      // pagination control
+      pagination: $('#index_wrapper'),
+      // mosaic effects
+      slices: [20, 8],
+      mode : 'random'
     });
 </script>
 </body></html>

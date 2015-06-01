@@ -24,9 +24,14 @@ border-radius: 4px;
     -webkit-box-shadow: #868686 0 0px 10px -1px;
 }
 
-#news {
+#news p{
+    margin-top: 20px;
     margin-left: -20px;
-    -webkit-box-shadow: #868686 0 0px 10px -1px;
+    border-bottom: 1px dashed #ddd;
+}
+
+#news span{
+    color: #A0589F;
 }
 
 .news .date {
