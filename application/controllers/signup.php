@@ -34,9 +34,8 @@ class Signup extends CI_Controller {
 	}
 
 	public function ajax_create_signup()
-	{
-		$s_id = $this->input->post('s_id');		
-		$name = $this->input->post('name');
+	{		
+		$title = $this->input->post('title');
 		$department = $this->input->post('department');
 		$sex = $this->input->post('sex');
 		$email = $this->input->post('email');

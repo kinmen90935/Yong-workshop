@@ -20,7 +20,7 @@
 		    <div id="header" class="group">
 		    	<a id="logo" href="<?=base_url();?>news"><img src="<?=base_url();?>assets/images/logo.png" alt="" width="10%"></a>
 				<h1 class="back-title">
-					教學卓越後台首頁
+					教學卓越後台
 				</h1 >
 		        <div id="headerArea">
 		            <a href="http://www.ntue.edu.tw" target="_blank" ><span class="ui-icon  ui-icon-home"></span>北教大首頁</a>
@@ -37,11 +37,11 @@
 						<div class="admin_aside_content">
 							<div>
 								<ul class="toggle">
-								    <li><a href="add_news.php"><span class="ui-icon   ui-icon-document"></span>新增消息</a></li>
-								    <li><a href="edit_news.php"><span class="ui-icon  ui-icon-document-b"></span>修改消息</a></li>
-								    <li><a href="edit_link.php"><span class="ui-icon  ui-icon-flag"></span>成果專區</a></li>
-								    <li><a href="edit_rules.php"><span class="ui-icon ui-icon-plusthick"></span>活動報名新增</a></li>
-								    <li><a href="sort_file.php"><span class="ui-icon  ui-icon-pencil"></span>活動報名修改</a></li>
+								    <li><a href="<?=base_url()?>admin/admin_home"><span class="ui-icon   ui-icon-document"></span>新增消息</a></li>
+								    <li><a href="<?=base_url()?>admin/edit_news"><span class="ui-icon  ui-icon-document-b"></span>修改消息</a></li>
+								    <li><a href="<?=base_url()?>admin/edit_link.php"><span class="ui-icon  ui-icon-flag"></span>成果專區</a></li>
+								    <li><a href="<?=base_url()?>admin/edit_rules.php"><span class="ui-icon ui-icon-plusthick"></span>活動報名新增</a></li>
+								    <li><a href="<?=base_url()?>admin/sort_file.php"><span class="ui-icon  ui-icon-pencil"></span>活動報名修改</a></li>
 								  </ul>
 							</div>
 						</div>
