@@ -123,7 +123,7 @@ class Admin extends CI_Controller {
 
 		$data['news_complete'] = $this->admin_model->get_news_complete($slug);	
 		$this->load->view('admin/edit_news_complete', $data);
-		echo json_encode(array('rtn' => true));
+		//echo json_encode(array('rtn' => true));
 	}
 	public function ajax_edit_news_complete()
 	{	
@@ -146,7 +146,7 @@ class Admin extends CI_Controller {
 			$data['editNews'] = $this->admin_model->edit_admin_news($news_title, $content, $post_date, $n_id);
 			if($data['editNews'])
 			{
-				echo json_encode(array('status' => true, 'msg' => '已新增資料!'));
+				echo json_encode(array('status' => true, 'msg' => '已更新資料!'));
 			}
 			else
 			{
@@ -161,7 +161,8 @@ class Admin extends CI_Controller {
 		{
             header("location:".base_url()."admin/login");
         }
-        $this->db->delete('news', array('n_id' => $_POST['delid']));//資料庫，因為只有一行。。。
+        $n_id = $this->input->post('delid');
+        $this->admin_model->delete_admin_news($n_id);
 		echo json_encode(array('status' => true, 'msg' => '刪除成功'));
 	}
 
@@ -184,10 +185,13 @@ class Admin extends CI_Controller {
 	{
         $sign_title = $this->input->post('sign_title');
 		$content = $this->input->post('content');
+
 		$active_date = $this->input->post('active_date');
 		$active_date = strtotime($active_date);
+
 		$sign_start = $this->input->post('sign_start');
 		$sign_start = strtotime($sign_start);
+
 		$sign_end = $this->input->post('sign_end');
 		$sign_end = strtotime($sign_end);
 
@@ -223,6 +227,115 @@ class Admin extends CI_Controller {
 				echo json_encode(array('status' => FALSE, 'msg' => '無法新增!'));		
 			}
 		}
+	}
+
+	public function edit_signup()
+	{
+		if (!$this->session->userdata('m_id')) 
+		{
+            header("location:".base_url()."admin/login");
+        }
+        $data['m_id'] = $this->session->userdata('m_id');
+        $data['username'] = $this->session->userdata('username');
+        $data['c_id'] = $this->session->userdata('c_id');
+        $data['nickname'] = $this->session->userdata('nickname');
+        $data['title'] = '報名資訊更新';
+
+        $data['signup'] = $this->admin_model->get_signup();
+		$this->load->view('admin/edit_signup', $data);
+	}
+
+	public function edit_signup_complete($slug)
+	{
+		if (!$this->session->userdata('m_id')) 
+		{
+            header("location:".base_url()."admin/login");
+        }
+        $data['m_id'] = $this->session->userdata('m_id');
+        $data['username'] = $this->session->userdata('username');
+        $data['c_id'] = $this->session->userdata('c_id');
+        $data['nickname'] = $this->session->userdata('nickname');
+
+		$data['signup_complete'] = $this->admin_model->get_signup_complete($slug);	
+		$this->load->view('admin/edit_signup_complete', $data);
+		//echo json_encode(array('rtn' => true));
+	}
+
+	public function ajax_edit_signup_complete()
+	{	
+		$title = $this->input->post('title');
+		$content = $this->input->post('content');
+
+		$begin_at = $this->input->post('begin_at');
+		$begin_at = strtotime($begin_at);
+
+		$s_id = $this->input->post('s_id');
+
+		$start_date = $this->input->post('start_date');
+		$start_date = strtotime($start_date);
+
+		$end_date = $this->input->post('end_date');
+		$end_date = strtotime($end_date);
+
+		if($title=="")
+		{
+			echo json_encode(array('status' => false, 'msg' => '請輸入標題!'));
+		} 
+		else if($begin_at=="")
+		{
+			echo json_encode(array('status' => false, 'msg' => '請輸入活動開始日期!'));
+		}
+		else if($start_date=="")
+		{
+			echo json_encode(array('status' => false, 'msg' => '請輸入報名開始日期!'));
+		} 
+		else if($end_date=="")
+		{
+			echo json_encode(array('status' => false, 'msg' => '請輸入報名截止日期!'));
+		} 
+		else if($content=="")
+		{
+			echo json_encode(array('status' => false, 'msg' => '請輸入內容!'));
+		}  
+		else 
+		{	
+			$data['edit_Signup'] = $this->admin_model->edit_admin_signup($title, $content, $begin_at, $s_id, $start_date, $end_date);
+			if($data['edit_Signup'])
+			{
+				echo json_encode(array('status' => true, 'msg' => '已更新資料!'));
+			}
+			else
+			{
+				echo json_encode(array('status' => false, 'msg' => '無此資料'));		
+			}
+		}
+	}
+
+	public function ajax_signup_delete()
+	{
+		if (!$this->session->userdata('m_id')) 
+		{
+            header("location:".base_url()."admin/login");
+        }
+        $s_id = $this->input->post('delid');
+        $this->admin_model->delete_admin_signup($s_id);
+        //$this->db->delete('signup', array('s_id' => $_POST['delid']));//資料庫，因為只有一行。。。
+		echo json_encode(array('status' => true, 'msg' => '刪除成功'));
+	}
+
+	public function add_achieve()
+	{
+		if (!$this->session->userdata('m_id')) 
+		{
+            header("location:".base_url()."admin/login");
+        }
+        $data['m_id'] = $this->session->userdata('m_id');
+        $data['username'] = $this->session->userdata('username');
+        $data['c_id'] = $this->session->userdata('c_id');
+        $data['nickname'] = $this->session->userdata('nickname');
+        $data['title'] = '報名資訊新增';
+
+		$this->load->view('admin/add_achieve', $data);
 	}
 
 	public function unset_session()

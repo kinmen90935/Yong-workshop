@@ -26,6 +26,7 @@
 				return false;
 			}
 		}
+
 		public function create_admin_news($news_title,$content)
 		{
 			$insertArray = array(		
@@ -82,6 +83,13 @@
 			$this->db->update("news", $updateArray);
 			return true;
 		}
+
+		public function delete_admin_news($n_id)
+		{
+			$this->db->delete('news', array('n_id' => $n_id));
+			return true;
+		}
+
 		public function create_admin_sign($sign_title,$content,$active_date,$sign_start,$sign_end)
 		{
 			$insertArray = array(		
@@ -97,6 +105,42 @@
 				}
 			endforeach;
 			$this->db->insert("signup", $insertArray);
+			return true;
+		}
+
+		public function get_signup()
+		{
+			$this->db->select("s_id,title,begin_at,start_date,end_date,count");
+			$this->db->order_by("s_id", "desc");
+			$query = $this->db->get('signup');
+			return $query->result_array();
+		}
+
+		public function get_signup_complete($slug)
+		{
+			$query = $this->db->get_where('signup', array('s_id' => $slug));
+			return $query->row_array();
+		}
+
+		public function edit_admin_signup($title, $content, $begin_at, $s_id, $start_date, $end_date)
+		{
+			$updateArray = array(
+	               'title' => $title,
+	               'content' => $content,
+	               'begin_at' => $begin_at,
+	               'start_date' => $start_date,
+	               'end_date' => $end_date
+	            );
+
+			$this->db->where('s_id', $s_id);
+
+			$this->db->update("signup", $updateArray);
+			return true;
+		}
+
+		public function delete_admin_signup($s_id)
+		{
+			$this->db->delete('signup', array('s_id' => $s_id));
 			return true;
 		}
 	}

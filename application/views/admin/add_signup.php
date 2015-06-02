@@ -71,6 +71,7 @@
 				              //window.location.href = "<?= base_url()?>admin/add_signup";
 				              console.log("def");
 				              alert(rtn.msg);
+				              $('#sign_form')[0].reset();
 				            } 
 				            else 
 				            {
