@@ -165,6 +165,66 @@ class Admin extends CI_Controller {
 		echo json_encode(array('status' => true, 'msg' => '刪除成功'));
 	}
 
+	public function add_signup()
+	{
+		if (!$this->session->userdata('m_id')) 
+		{
+            header("location:".base_url()."admin/login");
+        }
+        $data['m_id'] = $this->session->userdata('m_id');
+        $data['username'] = $this->session->userdata('username');
+        $data['c_id'] = $this->session->userdata('c_id');
+        $data['nickname'] = $this->session->userdata('nickname');
+        $data['title'] = '報名資訊新增';
+
+		$this->load->view('admin/add_signup', $data);
+	}
+
+	public function ajax_add_signup()
+	{
+        $sign_title = $this->input->post('sign_title');
+		$content = $this->input->post('content');
+		$active_date = $this->input->post('active_date');
+		$active_date = strtotime($active_date);
+		$sign_start = $this->input->post('sign_start');
+		$sign_start = strtotime($sign_start);
+		$sign_end = $this->input->post('sign_end');
+		$sign_end = strtotime($sign_end);
+
+		if($sign_title=="")
+		{
+			echo json_encode(array('status' => FALSE, 'msg' => '請輸入標題!'));
+		} 
+		else if($content=="")
+		{
+			echo json_encode(array('status' => FALSE, 'msg' => '請輸入內容!'));
+		} 
+		else if($active_date=="")
+		{
+			echo json_encode(array('status' => FALSE, 'msg' => '請輸入活動開始日期!'));
+		} 
+		else if($sign_start=="")
+		{
+			echo json_encode(array('status' => FALSE, 'msg' => '請輸入報名開始日期'));
+		} 
+		else if($sign_end=="")
+		{
+			echo json_encode(array('status' => FALSE, 'msg' => '請輸入報名截止日期!'));
+		} 
+		else 
+		{	
+			$data['createSign'] = $this->admin_model->create_admin_sign($sign_title,$content,$active_date,$sign_start,$sign_end);
+			if($data['createSign'])
+			{
+				echo json_encode(array('status' => TRUE, 'msg' => '已新增資料!'));
+			}
+			else
+			{
+				echo json_encode(array('status' => FALSE, 'msg' => '無法新增!'));		
+			}
+		}
+	}
+
 	public function unset_session()
 	{
 		$this->session->unset_userdata('m_id');

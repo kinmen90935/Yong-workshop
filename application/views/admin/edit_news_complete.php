@@ -28,7 +28,7 @@
         currentText: "today",
         changeMonth: true,
       });
-		  });
+		});
         $(document).ready(function(){
         $('#news_form').submit(function(e) {
           e.preventDefault(); 

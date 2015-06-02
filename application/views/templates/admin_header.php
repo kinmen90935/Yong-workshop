@@ -39,9 +39,9 @@
 								<ul class="toggle">
 								    <li><a href="<?=base_url()?>admin/admin_home"><span class="ui-icon   ui-icon-document"></span>新增消息</a></li>
 								    <li><a href="<?=base_url()?>admin/edit_news"><span class="ui-icon  ui-icon-document-b"></span>修改消息</a></li>
-								    <li><a href="<?=base_url()?>admin/edit_link.php"><span class="ui-icon  ui-icon-flag"></span>成果專區</a></li>
-								    <li><a href="<?=base_url()?>admin/edit_rules.php"><span class="ui-icon ui-icon-plusthick"></span>活動報名新增</a></li>
-								    <li><a href="<?=base_url()?>admin/sort_file.php"><span class="ui-icon  ui-icon-pencil"></span>活動報名修改</a></li>
+								    <li><a href="<?=base_url()?>admin/edit_achieve"><span class="ui-icon  ui-icon-flag"></span>成果專區</a></li>
+								    <li><a href="<?=base_url()?>admin/add_signup"><span class="ui-icon ui-icon-plusthick"></span>活動報名新增</a></li>
+								    <li><a href="<?=base_url()?>admin/edit_signup.php"><span class="ui-icon  ui-icon-pencil"></span>活動報名修改</a></li>
 								  </ul>
 							</div>
 						</div>
