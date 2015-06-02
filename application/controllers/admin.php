@@ -123,6 +123,7 @@ class Admin extends CI_Controller {
 
 		$data['news_complete'] = $this->admin_model->get_news_complete($slug);	
 		$this->load->view('admin/edit_news_complete', $data);
+		echo json_encode(array('rtn' => true));
 	}
 	public function ajax_edit_news_complete()
 	{	
@@ -153,6 +154,17 @@ class Admin extends CI_Controller {
 			}
 		}
 	}
+
+	public function ajax_news_delete()
+	{
+		if (!$this->session->userdata('m_id')) 
+		{
+            header("location:".base_url()."admin/login");
+        }
+        $this->db->delete('news', array('n_id' => $_POST['delid']));//資料庫，因為只有一行。。。
+		echo json_encode(array('status' => true, 'msg' => '刪除成功'));
+	}
+
 	public function unset_session()
 	{
 		$this->session->unset_userdata('m_id');

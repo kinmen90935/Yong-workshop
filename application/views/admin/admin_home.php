@@ -7,7 +7,7 @@
 					    	<label>標題</label>
 						    <input type="text" placeholder="標題" id="news_title" name="news_title"/><br>
 						    <label>內容</label>
-							  <textarea placeholder="內容"  id="content" name="content" rows="10">123</textarea>
+							  <textarea placeholder="內容"  id="content" name="content" rows="10"></textarea>
 							  <input type="hidden" name="post_date" value="<?php echo strtotime(date("Y/m/d"));?>"/><br>
 					    	
 					    </fieldset>
