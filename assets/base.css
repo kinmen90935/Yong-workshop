@@ -162,16 +162,16 @@ li {
   background-color: #F9B900;
 }
 #header #nav li.nav_achieve {
-  border-bottom-color: #E54585;
-}
-#header #nav li.nav_achieve:hover {
-  background-color: #E54585;
-}
-#header #nav li.nav_planExam {
   border-bottom-color: #2BAD36;
 }
-#header #nav li.nav_planExam:hover {
+#header #nav li.nav_achieve:hover {
   background-color: #2BAD36;
+}
+#header #nav li.nav_planExam {
+  border-bottom-color: #2BA5DF;
+}
+#header #nav li.nav_planExam:hover {
+  background-color: #2BA5DF;
 }
 #header #nav li.nav_signup {
   border-bottom-color: #E54585;
