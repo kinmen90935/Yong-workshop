@@ -28,7 +28,7 @@
         currentText: "today",
         changeMonth: true,
       });
-		  });
+		});
         $(document).ready(function(){
         $('#news_form').submit(function(e) {
           e.preventDefault(); 
@@ -46,7 +46,7 @@
             success:function(rtn, textStatus, jqXHR) {
               if (rtn.status) 
               {
-                window.location.href = "<?= base_url()?>admin/admin_home";
+                window.location.href = "<?= base_url()?>admin/edit_news";
                 console.log("def");
                 alert(rtn.msg);
               } 

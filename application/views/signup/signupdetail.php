@@ -17,7 +17,9 @@
     }
 ?>
 <!--報名頁面-->
-<div class="top" style="background-color:#FFFFFF; color:#0077DD;">活動報名</div>
+<a href="<?=base_url()?>signup">
+    <div class="top" style="background-color:#FFFFFF; color:#0077DD;">活動報名</div>
+</a>
 <div class="inner">
     <div class="col span_10_of_12">        
     	<form id="formPost"  method="post" class="elegant-aero">
@@ -100,7 +102,8 @@
             </label>
             <div class="alert alert-danger" style="display:none"></div>
             <div class="alert alert-success" style="display:none"></div>
-            <input type="submit" id="signBtn" value="我要報名" name="add_news" class="button alt_btn">
+            <input type="submit" id="signBtn" value="我要報名" name="add_news" class="button alt_btn">  
+            <a onClick="javascript:history.back(1)"><p class="back_page">回上一頁</p></a>       
         </form>
     </div>
 </div>

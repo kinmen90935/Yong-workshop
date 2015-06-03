@@ -171,6 +171,7 @@ border-radius: 4px;
 
 /*個人介紹*/
 .profile {
+    float: left;
     margin-bottom: 100px;
 }
 .profile h4 {
@@ -179,29 +180,42 @@ border-radius: 4px;
 }
 .profilePic {
     float: left;
-    width: 10em;
-}
-
-.profilePic img {
     border-radius: 50%;
     overflow: hidden;
     width: 8em;
     height: 8em;
     margin: 0;
     border: 1px solid #EAEAEA;
-    padding: 4px;
-    background-color: #fff;
+}
+
+.profilePic p {
+    font-size: 30px;
+    padding: 10px 0px 0px 0px;
+    color: #FFF;
 }
 
 .profileDetail {
-    margin-left: 15em;
-    font-size: 14px;
+    margin-left: 7em;
+    font-size: 13.5px;
 }
 .profileDetail p {
     text-indent: 0;
     line-height: 2.4em;
 }
 .profileDetail li {line-height: 2em;}
+
+.profileDetail_2 {
+    margin-left: 9.3em;
+    font-size: 13.5px;
+}
+.profileDetail_2 p {
+    text-indent: 0;
+    line-height: 2.4em;
+}
+.profileDetail_2 li {
+    line-height: 2em;
+    margin-left: -30px;
+}
 
 /*活動報名*/
 
