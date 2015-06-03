@@ -1,24 +1,33 @@
-<ul class="pagination">
-	<li id="li-float" class="pages-pre">
-		<a href="#"><span  class="ui-icon  ui-icon-circle-arrow-w"></span></a>
-	</li>
-	<?php 
-		for($i=0;$i<=$news_number;$i++)	{ 
-	?>
-		<li class="pages<?php echo $i+1;?>" id="li-float">
-			<a href="#"> <?php echo $i+1; ?></a>
-			<script>
-				$(".pages<?php echo $i+1;?>").data('page',<?php echo $i+1;?>);
-			</script>
+<div class="pag_wrap">
+	<ul class="pagination">
+		<li id="li-float" class="pages-pre">
+			<a href="#"><span  class="ui-icon  ui-icon-circle-arrow-w"></span></a>
 		</li>
-	<?php 
-		}
-	?>
-	<li id="li-float" class="pages-next"><a href="#"><span  class="ui-icon   ui-icon-circle-arrow-e"></span></a></li>
-</ul>
+		<?php 
+			for($i=0;$i<=$news_number;$i++)	{ 
+		?>
+			<li class="pages<?php echo $i+1;?>" id="li-float">
+				<a href="#"> <?php echo $i+1; ?></a>
+				<script>
+					$(".pages<?php echo $i+1;?>").data('page',<?php echo $i+1;?>);
+				</script>
+			</li>
+		<?php 
+			}
+		?>
+		<li id="li-float" class="pages-next"><a href="#"><span  class="ui-icon   ui-icon-circle-arrow-e"></span></a></li>
+	</ul>
+</div>
+
 
 	
 <style type="text/css">
+	.pag_wrap{
+		text-align: center;
+	}	
+	.pagination{
+		display: inline-block;
+	}
 	#li-float{
 		float: left;
 		margin: 8px;

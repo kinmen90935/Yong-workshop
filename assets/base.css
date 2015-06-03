@@ -26,7 +26,7 @@ img {
 }
 .clear{clear: both}
 .block {
-  background-color: #fff;border: 1px solid #ddd;padding: 8px;margin-bottom: 2px;border-top: 1px solid #F5F5F5;border-bottom: 1px solid #D7D7D7;
+  background-color: #fff;border: 1px solid #ddd;padding: 50px 13px 0px 13px;margin-bottom: 2px;border-top: 1px solid #F5F5F5;border-bottom: 1px solid #D7D7D7;
 }
 h1,h2,h3,h4,h5,h6 {
 	font-family: \5FAE\8EDF\6B63\9ED1\9AD4, "微軟正黑體", "Microsoft JhengHei",MuseoSlab300, 'lucida sans unicode', 'lucida grande';
@@ -232,7 +232,7 @@ footer {
 .section {
 	clear: both;
 	padding: 0px;
-	margin: 0px;
+	margin: 0px -31px;
 }
 
 /*  COLUMN SETUP  */

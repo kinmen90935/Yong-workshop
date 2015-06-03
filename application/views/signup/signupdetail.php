@@ -101,6 +101,7 @@
             <div class="alert alert-danger" style="display:none"></div>
             <div class="alert alert-success" style="display:none"></div>
             <input type="submit" id="signBtn" value="我要報名" name="add_news" class="button alt_btn">
+            <div><a onClick="javascript:history.back(1)"><p class="back_page">回上一頁</p></a></div>
         </form>
     </div>
 </div>

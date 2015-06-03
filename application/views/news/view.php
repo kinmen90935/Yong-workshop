@@ -14,8 +14,9 @@
                 </h6>
                 <p>
                     <?php echo htmlspecialchars_decode($content);?>
-                </p>
-            </div>
+                </p>                       
+                  <div><a onClick="javascript:history.back(1)"><p class="back_page">回上一頁</p></a></div>                
+            </div>            
             <br><br><br><br><br><br><br><br>             
         </div>
     </div>

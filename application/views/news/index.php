@@ -49,87 +49,19 @@
 	});
 </script>
 <title><?php echo $title;?></title>
-<!--<div class="top_slider">
-	<ul class="slides">
-	  <input type="radio" name="radio-btn" id="img-1" checked />
-	  <li class="slide-container">
-	    <div class="slide">
-	      <img src="<?= base_url('/assets/images/slider1.png');?>">
-	    
-		</div>
-	  </li>
-
-	  <input type="radio" name="radio-btn" id="img-2" />
-	  <li class="slide-container">
-	    <div class="slide">
-	      <img src="<?= base_url('/assets/images/slider2.png');?>">
-	    </div>
-	  </li>
-
-	  <input type="radio" name="radio-btn" id="img-3" />
-	  <li class="slide-container">
-	    <div class="slide">
-	      <img src="<?= base_url('/assets/images/slider3.png');?>">
-	    </div>
-	  </li>-->
-	<!--
-	  <input type="radio" name="radio-btn" id="img-4" />
-	  <li class="slide-container">
-	    <div class="slide">
-	      <img src="http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg" />
-	    </div>
-	    <div class="slider_nav">
-	      <label for="img-3" class="prev">&#x2039;</label>
-	      <label for="img-5" class="next">&#x203a;</label>
-	    </div>
-	  </li>
-
-	  <input type="radio" name="radio-btn" id="img-5" />
-	  <li class="slide-container">
-	    <div class="slide">
-	      <img src="http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg" />
-	    </div>
-	    <div class="slider_nav">
-	      <label for="img-4" class="prev">&#x2039;</label>
-	      <label for="img-6" class="next">&#x203a;</label>
-	    </div>
-	  </li>
-
-	  <input type="radio" name="radio-btn" id="img-6" />
-	  <li class="slide-container">
-	    <div class="slide">
-	      <img src="http://farm9.staticflickr.com/8195/8098750703_797e102da2_z.jpg" />
-	    </div>
-	    <div class="slider_nav">
-	      <label for="img-5" class="prev">&#x2039;</label>
-	      <label for="img-1" class="next">&#x203a;</label>
-	    </div>
-	  </li> 
-		
-	  <li class="slider_nav-dots">
-	    <label for="img-1" class="slider_nav-dot" id="img-dot-1"></label>
-	    <label for="img-2" class="slider_nav-dot" id="img-dot-2"></label>
-	    <label for="img-3" class="slider_nav-dot" id="img-dot-3"></label>
-	   <!-- <label for="img-4" class="slider_nav-dot" id="img-dot-4"></label>
-	    <label for="img-5" class="slider_nav-dot" id="img-dot-5"></label>
-	    <label for="img-6" class="slider_nav-dot" id="img-dot-6"></label>
-	  </li>
-	</ul>
-</div>-->
 
 <div class="top_slider">
-	<ul id="moodular">			
+	<ul id="moodular">	
+	<!--加入slider圖片-->		
 		<li><img src="<?= base_url('/assets/images/slider1.png');?>"></li>
 		<li><img src="<?= base_url('/assets/images/slider2.png');?>"></li>
 		<li><img src="<?= base_url('/assets/images/slider3.png');?>"></li>
-	</ul>
-	
+		<li><img src="<?= base_url('/assets/images/slider4.png');?>"></li>
+	</ul>	
 </div>
 <div>
 	<ul id="index_wrapper"></ul>
 </div>
-
-
 
 <div class="inner">
 	<div class="col span_8_of_12">
