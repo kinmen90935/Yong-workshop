@@ -38,30 +38,3 @@
 			});
 		});
 	</script>
-	<!--
-	<script>
-		$(document).ready(function(e) {
-
-		  //查看該篇新聞
-			$('input[name=btnView]').click(function(e) {
-		    e.preventDefault();
-				var $this = $(this);
-				var newsid = $this.data('newsid');
-				console.log("abc");
-				$.ajax({
-					type: 'POST',
-					url: "<?=base_url()?>admin/edit_news_complete",
-					data: {'newsid' : newsid},
-					dataType: 'json',
-					success: function(rtn){
-						console.log("success");
-						window.location.href = "<?= base_url()?>admin/edit_news_complete";
-					},
-					error:function (jqXHR, ajaxOptions, thrownError){
-						console.log(jqXHR.responseText);
-					},
-				});
-		  });
-		});
-	</script>
-	-->
