@@ -87,7 +87,7 @@ td {
 }
 
 .back_page {
-    float: left;
+    float: right;
     width: 55px; 
     height: 25px;
     padding: 0;

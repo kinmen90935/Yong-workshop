@@ -12,12 +12,12 @@ body
 }
 
 a {
-  color: #003670;
+  color: #097FAD;
   text-decoration: none;
   font-weight: bold;
 }
 
-a:hover {color: #444}
+a:hover {color: #E54585}
 
 a:link, a:visited, a:hover, a:active, a:focus , * {
 }

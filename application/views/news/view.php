@@ -15,7 +15,7 @@
                 <p>
                     <?php echo htmlspecialchars_decode($content);?>
                 </p>                       
-                  <div><a onClick="javascript:history.back(1)"><p class="back_page">回上一頁</p></a></div>                
+                  <a onClick="javascript:history.back(1)"><p class="back_page">回上一頁</p></a>                
             </div>            
             <br><br><br><br><br><br><br><br>             
         </div>
