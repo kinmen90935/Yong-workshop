@@ -36,20 +36,12 @@
 	</script>
 </head>
 <body>
-	<div id="top_nav">
-		<div id="headerArea">
-			<ul>
-				<li><a href="http://www.ntue.edu.tw" target="_blank" ><span class="ui-icon  ui-icon-home"></span>北教大首頁</a></li>
-				<li><a href="http://ctld.ntue.edu.tw/" target="_blank" ><span class="ui-icon  ui-icon-home"></span>教學發展中心首頁</a></li>
-			</ul>
-		</div>
-	</div>
 	<div id="headerContainer">
 	    <div id="header" class="group">
 	    	<a id="logo" href="<?=base_url();?>news"><img src="<?=base_url();?>assets/images/logo.png" alt=""></a>
 		    <div class="inner">
 			    <ul id="nav" class="clearfix">
-			        <li class="nav_news"><a href="<?=base_url()?>news">最新消息</a></li>
+			        <li class="nav_news active"><a href="<?=base_url()?>news">最新消息</a></li>
 			        <li class="nav_introduce"><a href="<?=base_url()?>intro/introduce">計畫介紹</a></li>
 			        <li class="nav_plan"><a href="<?=base_url()?>intro/plan">主軸計畫</a></li>
 			        <li class="nav_achieve"><a href="<?=base_url()?>achieve">成果專區</a></li>
@@ -60,5 +52,13 @@
 		    </div>
 			</div>
 	    </div>
+	</div>
+	<div id="top_nav">
+		<div id="headerArea">
+			<ul>
+				<li><a href="http://www.ntue.edu.tw" target="_blank" ><span class="ui-icon  ui-icon-home"></span>北教大首頁</a></li>
+				<li><a href="http://ctld.ntue.edu.tw/" target="_blank" ><span class="ui-icon  ui-icon-home"></span>教學發展中心首頁</a></li>
+			</ul>
+		</div>
 	</div>
 <div class="wrap" id="main">
