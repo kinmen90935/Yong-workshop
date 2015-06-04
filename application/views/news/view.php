@@ -1,4 +1,7 @@
-<?php $this->load->view('templates/header');?>
+<?php
+    $this->load->view('templates/header');
+    date_default_timezone_set('Asia/Taipei');
+?>
     <div class="inner">
         <div class="col span_10_of_12">
             <div class="news">

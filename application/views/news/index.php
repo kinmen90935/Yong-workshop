@@ -65,6 +65,10 @@
 
 <div class="inner">
 	<div class="col span_8_of_12">
+		<div id="news_title">
+			<p>最新消息</p>
+		</div>
+		<br><br><br>
 		<div id="news">
 		</div>	
 		<div id="pg" data-role="page">

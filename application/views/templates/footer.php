@@ -1,6 +1,6 @@
 <div id="backtotop">↑</div>
 </div> <!-- wrap -->
-<div id="footerContainer" class="wrap">
+<div id="footerContainer" class="wrap clear">
 <footer>
     <div class="section group">
       <div class="col span_7_of_12">
