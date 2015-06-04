@@ -5,6 +5,7 @@ class Admin extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('admin_model');
+		date_default_timezone_set('Asia/Taipei');
 	}
 
 	public function index()
@@ -143,8 +144,7 @@ class Admin extends CI_Controller {
 		} 
 		else 
 		{	
-			$data['editNews'] = $this->admin_model->edit_admin_news($news_title, $content, $post_date, $n_id);
-			if($data['editNews'])
+			if($this->admin_model->edit_admin_news($news_title, $content, $post_date, $n_id);)
 			{
 				echo json_encode(array('status' => true, 'msg' => '已更新資料!'));
 			}
