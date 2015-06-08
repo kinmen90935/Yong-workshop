@@ -35,46 +35,60 @@
 </div>
 <script type="text/javascript">  
   //回頂端按鈕   
-    $("#backtotop").click(function(){
-        jQuery("html,body").animate({
-            scrollTop:0
-        },500);
-    });
-    $(window).scroll(function() {
-        if ( $(this).scrollTop() > 300){
-            $("#backtotop").fadeIn("fast");
-        } else {
-            $("#backtotop").stop().fadeOut("fast");
-        }
-    });
+  $("#backtotop").click(function(){
+      jQuery("html,body").animate({
+          scrollTop:0
+      },500);
+  });
+  $(window).scroll(function() {
+      if ( $(this).scrollTop() > 300){
+          $("#backtotop").fadeIn("fast");
+      } else {
+          $("#backtotop").stop().fadeOut("fast");
+      }
+  });
 
-    $('#moodular').moodular({
-    /* core parameters */
-      // effects separated by space
-      effects: 'mosaic',
-      // controls separated by space
-      controls: 'keys pagination',
-      // if you want some yummy transition
-      easing: '',
-      // step 
-      step: 1,
-      // selector is to specify the children of your element (tagName)
-      selector: 'li',
-      // if timer is 0 the carrousel isn't automatic, else it's the interval in ms between each step
-      timer: 5000,
-      // speed is the time in ms of the transition
-      speed: 2000,
-      // queuing animation ?
-      queue: false,
-    /* parameters for controls or effects */
-      // keys control
-      keyPrev: 37, // left key
-      keyNext: 39, // right key
-      // pagination control
-      pagination: $('#index_wrapper'),
-      // mosaic effects
-      slices: [20, 8],
-      mode : 'random'
+  $('#moodular').moodular({
+  /* core parameters */
+    // effects separated by space
+    effects: 'mosaic',
+    // controls separated by space
+    controls: 'keys pagination',
+    // if you want some yummy transition
+    easing: '',
+    // step 
+    step: 1,
+    // selector is to specify the children of your element (tagName)
+    selector: 'li',
+    // if timer is 0 the carrousel isn't automatic, else it's the interval in ms between each step
+    timer: 5000,
+    // speed is the time in ms of the transition
+    speed: 2000,
+    // queuing animation ?
+    queue: false,
+  /* parameters for controls or effects */
+    // keys control
+    keyPrev: 37, // left key
+    keyNext: 39, // right key
+    // pagination control
+    pagination: $('#index_wrapper'),
+    // mosaic effects
+    slices: [20, 8],
+    mode : 'random'
+  });
+  $(document).ready(function(){
+    var offset = $('#footerContainer').offset();
+    var h = $( window ).height() - $('#footerContainer').height();
+    if (offset.top < h ) {
+      $('#footerContainer').offset({ top: h});
+    };    
+    $(window).resize(function(){
+      offset = $('#footerContainer').offset();
+      h = $( window ).height() - $('#footerContainer').height();
+      if (offset.top < h ) {
+        $('#footerContainer').offset({ top: h});
+      };
     });
+  });
 </script>
 </body></html>
