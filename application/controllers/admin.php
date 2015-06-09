@@ -144,7 +144,7 @@ class Admin extends CI_Controller {
 		} 
 		else 
 		{	
-			if($this->admin_model->edit_admin_news($news_title, $content, $post_date, $n_id);)
+			if($this->admin_model->edit_admin_news($news_title, $content, $post_date, $n_id))
 			{
 				echo json_encode(array('status' => true, 'msg' => '已更新資料!'));
 			}
