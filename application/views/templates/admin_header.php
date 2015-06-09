@@ -22,10 +22,12 @@
 				<h1 class="back-title">
 					教學卓越後台
 				</h1 >
-		        <div id="headerArea">
-		            <a href="http://www.ntue.edu.tw" target="_blank" ><span class="ui-icon  ui-icon-home"></span>北教大首頁</a>
-		            <a href="http://ctld.ntue.edu.tw/" target="_blank" ><span class="ui-icon  ui-icon-home"></span>教學發展中心首頁</a>
-					<a href="<?=base_url();?>admin/unset_session"><span class="ui-icon  ui-icon-extlink"></span>登出</a>
+				<div class="inner">
+			        <div id="nav">
+			            <a href="http://www.ntue.edu.tw" target="_blank" ><span class="ui-icon  ui-icon-home"></span>北教大首頁</a>
+			            <a href="http://ctld.ntue.edu.tw/" target="_blank" ><span class="ui-icon  ui-icon-home"></span>教學發展中心首頁</a>
+						<a href="<?=base_url();?>admin/unset_session"><span class="ui-icon  ui-icon-extlink"></span>登出</a>
+			        </div>
 		        </div>
 			</div>
 			<div class="inner">

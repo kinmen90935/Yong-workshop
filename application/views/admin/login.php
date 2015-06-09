@@ -73,7 +73,7 @@
   </head>
   <body>
     <div id="container">
-      <img src="<?=base_url()?>assets/images/logo.png" width='200' alt="教發中心後臺登入頁面">
+      <a href="<?=base_url()?>news"><img src="<?=base_url()?>assets/images/logo.png" width='200' alt="教發中心後臺登入頁面"></a>
       <h2>
         教學卓越後台登入系統
       </h2>
