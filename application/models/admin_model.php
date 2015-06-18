@@ -90,8 +90,19 @@
 			return true;
 		}
 
-		public function create_admin_sign($sign_title,$content,$active_date,$sign_start,$sign_end)
+		public function create_admin_sign($sign_title,$content,$active_date,$sign_start,$sign_end,$sign_chk_group)
 		{
+			foreach ($sign_chk_group as $key => $value) 
+			{
+				if($sign_chk_group[$key])
+				{
+					$sign_chk_group[$key] = 1;
+				}
+				else
+				{
+					$sign_chk_group[$key] = 0;
+				}
+			}//改!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 			$insertArray = array(		
 				'title' => $sign_title,
 				'content' => $content,

@@ -8,6 +8,7 @@
 							    	<input type="text" placeholder="標題" id="sign_title" name="sign_title"/><br>
 							    <label>活動開始日期</label>
 								    <input type="text"  placeholder="活動開始日期" name="active_date"/><br>
+								
 								<label>活動內容</label>
 								    <textarea placeholder="內容"  id="content" name="content" rows="10"></textarea>
 								<label>報名開始日期</label>
@@ -15,6 +16,14 @@
 								<label>報名截止日期</label>
 									<input type="text"  placeholder="報名截止日期" name="sign_end"/><br>
 						    </fieldset>
+						    <fieldset>
+							    <label>所需欄位</label>
+									    <input type="checkbox" name="chk_group[]" value="bool_sex" />性別
+										<input type="checkbox" name="chk_group[]" value="bool_birthday" />生日
+										<input type="checkbox" name="chk_group[]" value="bool_identity" />身分證
+										<input type="checkbox" name="chk_group[]" value="bool_phone" />手機
+										<input type="checkbox" name="chk_group[]" value="bool_food" />餐飲
+							</fieldset>  
 						    <input type="submit" class="btn" id="btnLogin" value="新增活動"></input>
 					    </form>
 					</div>
@@ -56,14 +65,20 @@
 			        var active_date = $("input[name=active_date]").val();
 			        var sign_start = $("input[name=sign_start]").val();
 			        var sign_end = $("input[name=sign_end]").val();
+			        
 
-			        console.log(sign_start);
+			        var sign_chk_group = [];
+					$("input[name='chk_group[]']:checked").each(function(i){
+					    sign_chk_group[i] = $(this).val();
+
+					});
+			        console.log(sign_chk_group[0],sign_chk_group[1],sign_chk_group[2],sign_chk_group[3],sign_chk_group[4]);
 
 			        console.log("ZZZ");
 			        $.ajax({
 			            url : '<?= base_url()?>admin/ajax_add_signup',
 			            type: "POST",
-			            data : {'sign_title' : sign_title ,'content' : content, 'active_date' : active_date, 'sign_start' : sign_start, 'sign_end' : sign_end},
+			            data : {'sign_title' : sign_title ,'content' : content, 'active_date' : active_date, 'sign_start' : sign_start, 'sign_end' : sign_end, 'sign_chk_group' : sign_chk_group},
 			            dataType: 'json',
 			            success:function(rtn, textStatus, jqXHR) {
 				            if (rtn.status) 

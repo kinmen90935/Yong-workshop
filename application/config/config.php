@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '/excellent/';
+$config['base_url']	= '';
 
 /*
 |--------------------------------------------------------------------------

@@ -5,7 +5,7 @@
 				    	<fieldset>
 				    		<legend>最新消息表單</legend>
 					    	<label>標題</label>
-						    <input type="text" placeholder="標題" id="news_title" name="news_title"/><br>
+						    <input type="text" placeholder="標題" name="news_title"/><br>
 						    <label>內容</label>
 							  <textarea placeholder="內容"  id="content" name="content" rows="10"></textarea>
 							  <input type="hidden" name="post_date" value="<?php echo strtotime(date("Y/m/d"));?>"/><br>

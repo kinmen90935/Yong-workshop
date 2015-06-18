@@ -144,7 +144,7 @@ class Admin extends CI_Controller {
 		} 
 		else 
 		{	
-			if($this->admin_model->edit_admin_news($news_title, $content, $post_date, $n_id);)
+			if($this->admin_model->edit_admin_news($news_title, $content, $post_date, $n_id))
 			{
 				echo json_encode(array('status' => true, 'msg' => '已更新資料!'));
 			}
@@ -195,6 +195,10 @@ class Admin extends CI_Controller {
 		$sign_end = $this->input->post('sign_end');
 		$sign_end = strtotime($sign_end);
 
+		$sign_chk_group = $this->input->post('sign_chk_group');
+
+		
+
 		if($sign_title=="")
 		{
 			echo json_encode(array('status' => FALSE, 'msg' => '請輸入標題!'));
@@ -217,7 +221,7 @@ class Admin extends CI_Controller {
 		} 
 		else 
 		{	
-			$data['createSign'] = $this->admin_model->create_admin_sign($sign_title,$content,$active_date,$sign_start,$sign_end);
+			$data['createSign'] = $this->admin_model->create_admin_sign($sign_title,$content,$active_date,$sign_start,$sign_end,$sign_chk_group);
 			if($data['createSign'])
 			{
 				echo json_encode(array('status' => TRUE, 'msg' => '已新增資料!'));
