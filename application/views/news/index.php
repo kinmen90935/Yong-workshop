@@ -64,9 +64,14 @@
 </div>
 
 <div class="inner">
-	<div class="col span_8_of_12">
-		<div id="news">
-		</div>	
+	<div class="col span_8_of_12" style="margin-top:20px;">
+		<div class="aside">
+			<p>最新消息</p>
+		</div>
+		<div class="clear"></div>
+		<div id="news_block">
+			<ul id="news"></ul>
+		</div>
 		<div id="pg" data-role="page">
 		</div>
 	</div>

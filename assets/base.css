@@ -137,14 +137,14 @@ li {
   border-right: 1px solid #EDEDED;
   display: inline-block;
   float: left;
-  padding: 0px 18px;
+  padding: 0px 10px;
   position: relative;
   width: 60px;
   height: 70px;
 }
 #header #nav li.nav_news {
   border-left: 1px solid #EDEDED;
-  border-bottom-color: #2BA5DF;
+  border-bottom-color: #2BA5DF;  
 }
 #header #nav li.nav_news:hover {
   background-color: #2BA5DF;
@@ -188,7 +188,8 @@ li {
 #header #nav li a {
   position: absolute;
   width: 60px;
-  bottom: 6px;
+  /*bottom: 6px;*/
+  padding-top: 50px;
 }
 #header #nav li:hover a {
   color: #fff;

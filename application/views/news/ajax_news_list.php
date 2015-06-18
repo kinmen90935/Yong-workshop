@@ -1,11 +1,18 @@
-	<?php
-		date_default_timezone_set('Asia/Taipei');
-		foreach($news as $row) 
-		{	
-			$row['post_date'] = date('Y/m/d',$row['post_date']);
-			$row['title'] = "<a href=".base_url()."news/news_complete/".$row['n_id'].">".$row['title']."</a>";
-			//$this->table->add_row($row['post_date'],$row['title']);
-			echo "<p>".$row['post_date']."<br>".$row['title']."</p>";
-		}
-		//echo $this->table->generate();
-	?>
+<?php
+	date_default_timezone_set('Asia/Taipei');
+	foreach($news as $row) {
+?>
+<li>
+	<div class="news_info">
+		<span class='ui-icon ui-icon-triangle-1-se'></span>
+		<span class="date"><?= date('Y/m/d',$row['post_date'])?></span>
+	</div>
+	<div class="news_title">
+		<a href="<?= base_url()?>news/news_complete/<?= $row['n_id']?>"><?= $row['title']?></a>
+	</div>
+	<div class="clear"></div>
+</li>
+
+<?php
+	}
+?>

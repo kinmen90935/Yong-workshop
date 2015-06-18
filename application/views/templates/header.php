@@ -10,7 +10,6 @@
 		echo "<link rel='stylesheet' type='text/css' href='".base_url()."assets/jquery-ui.css'></link>";
 		echo "<link rel='stylesheet' type='text/css' href='".base_url()."assets/style.css'></link>";
 		echo "<link rel='stylesheet' type='text/css' href='".base_url()."assets/base.css'></link>";
-		echo "<link rel='stylesheet' type='text/css' href='".base_url()."assets/rita.css'></link>";
 	?>
 	<script>
 	$(function() {
