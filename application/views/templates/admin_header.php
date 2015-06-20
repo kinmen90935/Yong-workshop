@@ -15,6 +15,11 @@
 			.admin_aside_user{
 				background-color: #F4F5F7;
 			}
+			.back-title{
+				font-size: 40px;
+				color: #262626;
+				text-shadow: 20px 10px 3px #cccccc;
+			}
 		</style>
 		<div>
 		    <div id="header" class="group">

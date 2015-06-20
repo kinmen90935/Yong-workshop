@@ -18,11 +18,12 @@
 						    </fieldset>
 						    <fieldset>
 							    <label>所需欄位</label>
-									    <input type="checkbox" name="chk_group[]" value="bool_sex" />性別
-										<input type="checkbox" name="chk_group[]" value="bool_birthday" />生日
-										<input type="checkbox" name="chk_group[]" value="bool_identity" />身分證
-										<input type="checkbox" name="chk_group[]" value="bool_phone" />手機
-										<input type="checkbox" name="chk_group[]" value="bool_food" />餐飲
+									<input type="checkbox" name="chk_group[]" value="bool_sex" />性別
+								    <input type="checkbox" name="chk_group[]" value="bool_email" />電子信箱
+									<input type="checkbox" name="chk_group[]" value="bool_birthday" />生日
+									<input type="checkbox" name="chk_group[]" value="bool_identity" />身分證
+									<input type="checkbox" name="chk_group[]" value="bool_phone" />手機
+									<input type="checkbox" name="chk_group[]" value="bool_food" />餐飲
 							</fieldset>  
 						    <input type="submit" class="btn" id="btnLogin" value="新增活動"></input>
 					    </form>
@@ -70,9 +71,8 @@
 			        var sign_chk_group = [];
 					$("input[name='chk_group[]']:checked").each(function(i){
 					    sign_chk_group[i] = $(this).val();
-
 					});
-			        console.log(sign_chk_group[0],sign_chk_group[1],sign_chk_group[2],sign_chk_group[3],sign_chk_group[4]);
+			        console.log(sign_chk_group[0],sign_chk_group[1],sign_chk_group[2],sign_chk_group[3],sign_chk_group[4],sign_chk_group[5]);
 
 			        console.log("ZZZ");
 			        $.ajax({

@@ -1,7 +1,7 @@
 <?php $this->load->view('templates/admin_header');?>
 <?php date_default_timezone_set('Asia/Taipei'); ?>
 				<div class="col span_9_of_12">
-				    <form id="news_form" method="post">
+				    <form id="news_form" method="post" enctype="multipart/form-data" >
 				    	<fieldset>
 				    		<legend>最新消息表單</legend>
 					    	<label>標題</label>
@@ -9,21 +9,15 @@
 						    <label>內容</label>
 							  <textarea placeholder="內容"  id="content" name="content" rows="10"></textarea>
 							  <input type="hidden" name="post_date" value="<?php echo strtotime(date("Y/m/d"));?>"/><br>
-					    	
 					    </fieldset>
+
+              <input type="file" name="userfile" size="20" />
 					    <input type="submit" class="btn" id="btnLogin" value="提交"></input>
 				    </form>
 				</div>
 			</div>
 			<!-- inner -->
 		</div>
-	<style type="text/css">
-		.back-title{
-			font-size: 40px;
-			color: #262626;
-			text-shadow: 20px 10px 3px #cccccc;
-		}
-	</style>
   <script type="text/javascript">
     $(document).ready(function(){
       $('#news_form').submit(function(e) {

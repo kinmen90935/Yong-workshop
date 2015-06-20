@@ -92,23 +92,54 @@
 
 		public function create_admin_sign($sign_title,$content,$active_date,$sign_start,$sign_end,$sign_chk_group)
 		{
+			$bool_sex = 0;
+			$bool_email = 0;
+			$bool_birthday = 0;
+			$bool_identity = 0;
+			$bool_phone = 0;	
+			$bool_food = 0;	
 			foreach ($sign_chk_group as $key => $value) 
 			{
-				if($sign_chk_group[$key])
+				if(isset($sign_chk_group[$key]))
 				{
-					$sign_chk_group[$key] = 1;
+					if($sign_chk_group[$key]=='bool_sex')
+					{
+						$bool_sex = 1;
+					}
+					if($sign_chk_group[$key]=='bool_email')
+					{
+						$bool_email = 1;
+					}
+					if($sign_chk_group[$key]=='bool_birthday')
+					{
+						$bool_birthday = 1;
+					}
+					if($sign_chk_group[$key]=='bool_identity')
+					{
+						$bool_identity = 1;
+					}
+					if($sign_chk_group[$key]=='bool_phone')
+					{
+						$bool_phone = 1;
+					}
+					if($sign_chk_group[$key]=='bool_food')
+					{
+						$bool_food = 1;
+					}
 				}
-				else
-				{
-					$sign_chk_group[$key] = 0;
-				}
-			}//改!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			}
 			$insertArray = array(		
 				'title' => $sign_title,
 				'content' => $content,
 				'begin_at' => $active_date,
 				'start_date' => $sign_start,
 				'end_date' => $sign_end,
+				'bool_sex' => $bool_sex,
+				'bool_email' => $bool_email,
+				'bool_birthday' => $bool_birthday,
+				'bool_identity' => $bool_identity,
+				'bool_phone' => $bool_phone,	
+				'bool_food' => $bool_food
 			);
 			foreach ($insertArray as $key => $insertData) :
 				if (!$insertData) {
@@ -133,18 +164,58 @@
 			return $query->row_array();
 		}
 
-		public function edit_admin_signup($title, $content, $begin_at, $s_id, $start_date, $end_date)
+		public function edit_admin_signup($title, $content, $begin_at, $s_id, $start_date, $end_date, $sign_chk_group)
 		{
+			$bool_sex = 0;
+			$bool_email = 0;
+			$bool_birthday = 0;
+			$bool_identity = 0;
+			$bool_phone = 0;	
+			$bool_food = 0;	
+			foreach ($sign_chk_group as $key => $value) 
+			{
+				if(isset($sign_chk_group[$key]))
+				{
+					if($sign_chk_group[$key]=='bool_sex')
+					{
+						$bool_sex = 1;
+					}
+					if($sign_chk_group[$key]=='bool_email')
+					{
+						$bool_email = 1;
+					}
+					if($sign_chk_group[$key]=='bool_birthday')
+					{
+						$bool_birthday = 1;
+					}
+					if($sign_chk_group[$key]=='bool_identity')
+					{
+						$bool_identity = 1;
+					}
+					if($sign_chk_group[$key]=='bool_phone')
+					{
+						$bool_phone = 1;
+					}
+					if($sign_chk_group[$key]=='bool_food')
+					{
+						$bool_food = 1;
+					}
+				}
+			}
 			$updateArray = array(
-	               'title' => $title,
-	               'content' => $content,
-	               'begin_at' => $begin_at,
-	               'start_date' => $start_date,
-	               'end_date' => $end_date
+	                'title' => $title,
+	                'content' => $content,
+	                'begin_at' => $begin_at,
+	                'start_date' => $start_date,
+	                'end_date' => $end_date,
+	                'bool_sex' => $bool_sex,
+					'bool_email' => $bool_email,
+					'bool_birthday' => $bool_birthday,
+					'bool_identity' => $bool_identity,
+					'bool_phone' => $bool_phone,	
+					'bool_food' => $bool_food
 	            );
-
 			$this->db->where('s_id', $s_id);
-
 			$this->db->update("signup", $updateArray);
 			return true;
 		}

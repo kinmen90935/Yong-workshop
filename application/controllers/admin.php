@@ -6,6 +6,7 @@ class Admin extends CI_Controller {
 		parent::__construct();
 		$this->load->model('admin_model');
 		date_default_timezone_set('Asia/Taipei');
+		$this->load->helper(array('form'));
 	}
 
 	public function index()
@@ -62,6 +63,25 @@ class Admin extends CI_Controller {
 		$news_title = $this->input->post('news_title');
 		$content = $this->input->post('content');
 		$post_date = $this->input->post('post_date');
+
+		$config['upload_path'] = base_url().'assets/files';
+		$config['allowed_types'] = 'gif|jpg|png|doc|docx|pdf|xls';
+		$config['overwrite']	= FALSE;
+		$config['max_size']	= '0';
+		$config['max_width']  = '0';
+		$config['max_height']  = '0';
+		$config['max_filename']  = '0';
+
+		$this->load->library('upload',$config);
+
+		if ( ! $this->upload->do_upload())
+		{
+			$error = array('error' => $this->upload->display_errors());
+		}
+		else
+		{
+			$data = array('upload_data' => $this->upload->data());
+		}
 
 		if($news_title=="")
 		{
@@ -281,6 +301,8 @@ class Admin extends CI_Controller {
 		$end_date = $this->input->post('end_date');
 		$end_date = strtotime($end_date);
 
+		$sign_chk_group = $this->input->post('sign_chk_group');
+
 		if($title=="")
 		{
 			echo json_encode(array('status' => false, 'msg' => '請輸入標題!'));
@@ -303,7 +325,7 @@ class Admin extends CI_Controller {
 		}  
 		else 
 		{	
-			$data['edit_Signup'] = $this->admin_model->edit_admin_signup($title, $content, $begin_at, $s_id, $start_date, $end_date);
+			$data['edit_Signup'] = $this->admin_model->edit_admin_signup($title, $content, $begin_at, $s_id, $start_date, $end_date, $sign_chk_group);
 			if($data['edit_Signup'])
 			{
 				echo json_encode(array('status' => true, 'msg' => '已更新資料!'));
